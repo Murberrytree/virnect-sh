@@ -3,14 +3,17 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge, Chrome=1">
 	<title>VIRNECT</title>
 	<link rel="stylesheet" href="assets/css/reset.css">
 	<link rel="stylesheet" href="assets/css/common.css">
+	<script src="assets/js/jquery-3.2.1.min.js"></script>
+	<script src="assets/js/slick.js"></script>
 </head>
 
 <body class="dark">
-	<header id="header">
+	<header id="header" class="header if_top">
 		<div class="areaFlex">
 			<h1><a href="#">VIRNECT</a></h1>
 			<nav class="gnb-wrap">
@@ -233,9 +236,9 @@
 		</article>
 	</main>
 
-	<footer id="footer">
+	<footer id="footer" class="light">
 		<section class="areaFlex">
-			<h2>VIRNECT</h2>
+			<h2><img src="assets/images/foot_logo.png"></h2>
 			<address>
 				<h3 class="h-heading">주소 및 연락처</h3>
 				<dl>
@@ -246,9 +249,20 @@
 					<dt>전화</dt>
 					<dd>070-7733-2025</dd>
 				</dl>
+				<ul class="sns">
+					<li><a href="#"><img src="assets/images/facebook.png" alt="facebook link"></a></li>
+					<li><a href="#"><img src="assets/images/blog.png" alt="blog link"></a></li>
+					<li><a href="#"><img src="assets/images/youtube.png" alt="youtube link"></a></li>
+				</ul>
 			</address>
+			<p class="copy">&copy; VIRNECT INC. All rights reserved.</p>
+			<ul class="lang">
+				<li><a href="#">KOR</a></li>
+				<li><a href="#">ENG</a></li>
+			</ul>
 		</section>
 	</footer>
+	<script src="assets/js/common.js"></script>
 </body>
 
 </html>

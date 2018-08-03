@@ -1,2 +1,70 @@
 @charset "utf-8";
 
+@import url("../mixin.less");
+@Fh2Width : 290px;
+@dtWidth : 80px;
+
+#footer {
+	padding: 86px 0 188px;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 1;
+	.areaFlex {
+		position: relative;
+		overflow: hidden;
+	}
+	h2 {
+		float: left;
+		width: @Fh2Width;
+	}
+	address {
+		float: left;
+		width: calc(~"100% -" @Fh2Width);
+		overflow: hidden;
+	}
+	dl {
+		overflow: hidden;
+	}
+	dt {
+		width: @dtWidth;
+		float: left;
+		font-weight: bold;
+	}
+	dd {
+		width: calc(~"100%" - @dtWidth);
+		float: left;
+		font-family: @noto;
+		margin-bottom: 12px;
+	}
+	.copy {
+		position: absolute;
+		right: 0;
+		top: 0;
+		font-family: @noto;
+		color: @fog;
+		font-weight: 300;
+	}
+	.sns {
+		margin-top: 20px;
+		li {
+			display: inline-block;
+			margin-right: 4px;
+		}
+	}
+	.lang {
+		position: absolute;
+		bottom: 0;
+		right: 0;		
+		li {
+			display: inline-block;
+			&:first-child {
+				content: "";
+				border-right: 1px solid @fog;
+				padding-right: 4px;
+			}
+		}
+		a {
+			color: @fog;			
+		}
+	}
+}

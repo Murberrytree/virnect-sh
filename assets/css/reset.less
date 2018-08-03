@@ -165,10 +165,11 @@ section {
 }
 
 body {
-	font-size: 14px;
 	line-height: 1.6;
 	color: @baseColor;
+	font-size: 14px;
 	font-family: @poppins, @noto, sans-serif;
+	font-weight: 300;
 }
 
 .dark {
@@ -180,7 +181,11 @@ body {
 }
 .light {
 	background-color: #fff;
-	color: @baseColor
+	color: @baseColor;
+	font-weight: normal;
+	a {
+		color: @baseColor;
+	}
 }
 
 a {
@@ -226,6 +231,12 @@ caption {
 
 i, em {
 	font-style: normal;
+}
+
+.inline {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
 }
 
 @media screen and (max-width:@mobile) {

@@ -151,10 +151,11 @@ section {
   display: block;
 }
 body {
-  font-size: 14px;
   line-height: 1.6;
   color: #1a1a1b;
+  font-size: 14px;
   font-family: 'Poppins', 'Noto Sans Korean', sans-serif;
+  font-weight: 300;
 }
 .dark {
   background-color: #171717;
@@ -165,6 +166,10 @@ body {
 }
 .light {
   background-color: #fff;
+  color: #1a1a1b;
+  font-weight: normal;
+}
+.light a {
   color: #1a1a1b;
 }
 a {
@@ -205,6 +210,11 @@ caption {
 i,
 em {
   font-style: normal;
+}
+.inline {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
 }
 @media screen and (max-width: 479px) {
   body {
