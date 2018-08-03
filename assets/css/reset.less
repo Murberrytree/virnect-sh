@@ -171,6 +171,28 @@ body {
 	font-family: @poppins, @noto, sans-serif;
 }
 
+.dark {
+	background-color: #171717;
+	color: #fff;
+	a {
+		color: #fff;
+	}
+}
+.light {
+	background-color: #fff;
+	color: @baseColor
+}
+
+a {
+	text-decoration: none;
+	color: @baseColor;
+}
+
+a:hover {
+	text-decoration: none;
+	color: @point
+}
+
 ol,
 ul {
 	list-style: none;
@@ -187,16 +209,6 @@ input,
 textarea {
 	display: inline-block;
 	vertical-align: middle;
-}
-
-a {
-	text-decoration: none;
-	color: @baseColor;
-}
-
-a:hover {
-	text-decoration: none;
-	color: @point
 }
 
 button, input[type=submit] {

@@ -3,7 +3,6 @@
 .areaFlex {
   width: 1200px;
   margin: auto;
-  padding-bottom: 100px;
 }
 @media (max-width: 1199px) {
   .areaFlex {
@@ -18,7 +17,6 @@
 @media (max-width: 479px) {
   .areaFlex {
     width: 100%;
-    padding: 0 24px;
     box-sizing: border-box;
   }
 }
