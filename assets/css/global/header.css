@@ -23,18 +23,37 @@ h1 {
 }
 #gnb {
   text-align: center;
+  font-weight: 500;
 }
 #gnb ul {
   font-size: 0;
 }
 #gnb li {
+  position: relative;
   display: inline-block;
   font-size: 13px;
 }
 #gnb li ul {
+  position: absolute;
   display: none;
+  top: 0;
+  left: 0;
+  padding: 0 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid #303030;
+}
+#gnb li.active a,
+#gnb li:hover a {
+  opacity: 1;
+  color: #fff;
+  font-weight: bold;
+}
+#gnb li.active ul,
+#gnb li:hover ul {
+  display: block;
 }
 #gnb a {
-  padding: 0 27px;
+  padding: 10px 27px;
+  opacity: .5;
 }
 /* - Header */

@@ -2,6 +2,21 @@
 
 @import url("mixin.less");
 
+// hidden-heading
+.h-heading {
+	position: absolute;
+	left: -9999px;
+	top: -9999px;
+}
+
+@import url("global/header.less");
+
+#main {
+	padding-top: 300px;
+}
+
+@import url("global/footer.less");
+
 // mobile
 .mobile-show {
 	display: none;
@@ -20,17 +35,4 @@
 i.mobile-hidden {
 	.mobile-hidden;
 	display: inline-block;
-}
-
-// hidden-heading
-.h-heading {
-	position: absolute;
-	left: -9999px;
-	top: -9999px;
-}
-
-@import url("global/header.less");
-
-#main {
-	padding-top: 300px;
 }
