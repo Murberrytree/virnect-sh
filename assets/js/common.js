@@ -2,6 +2,7 @@ var mainPer = (function () {
 
 	function init() {
 		header();
+		imgUrl();
 //		slide();
 //		sideBar();
 	}
@@ -19,6 +20,15 @@ var mainPer = (function () {
 				$header.addClass("if_top");
 				$header.removeClass("if_scroll");
 			}
+		});
+	}
+	
+	function imgUrl() {
+		$(".img-url").each(function () {
+			var $url = $(this).attr("data-img");
+			$(this).css({
+				backgroundImage: "url(" + $url + ")"
+			});
 		});
 	}
 

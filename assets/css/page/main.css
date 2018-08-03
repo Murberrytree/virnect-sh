@@ -21,14 +21,31 @@
     box-sizing: border-box;
   }
 }
-.full-visual-container {
-  display: table;
+.snb {
   width: 100%;
-  height: 100vh;
-  text-align: center;
+  overflow: hidden;
 }
-.fsc-wrap {
+.snb li {
+  width: 25%;
+  text-align: center;
+  float: left;
+}
+.snb a {
+  display: table;
+  height: 320px;
+  width: 100%;
+}
+.snb div {
   display: table-cell;
+  width: 100%;
   vertical-align: middle;
-  text-align: left;
+}
+.snb h3 {
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.snb p {
+  font-size: 16px;
 }
