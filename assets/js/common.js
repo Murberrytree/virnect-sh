@@ -3,7 +3,7 @@ var mainPer = (function () {
 	function init() {
 		header();
 		imgUrl();
-//		slide();
+		slide();
 //		sideBar();
 	}
 
@@ -32,23 +32,25 @@ var mainPer = (function () {
 		});
 	}
 
-//	function slide() {
-//		var $visualArea = $(".visual_slide div");
-//		$visualArea.slick({
-//			autoplay: true,
-//			infinite: true,
-//			dots: true,
-//			arrows: false
-//		});
-//
-//		$(".img-url").each(function () {
-//			var $url = $(this).attr("data-img");
-//			$(this).css({
-//				backgroundImage: "url(" + $url + ")"
-//			});
-//		});
-//
-//	}
+	function slide() {
+		var $newslArea = $(".news-slide ul");
+		$newslArea.slick({
+			dots: false,
+			arrows: false,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			responsive: [
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						dots: true
+					}
+				}
+			]
+		})
+	}
 
 //	function sideBar() {
 //		var ckNum = 1,

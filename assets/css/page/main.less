@@ -2,6 +2,7 @@
 
 @import url("../mixin.less");
 
+/* + snb */
 .snb {
 	width: 100%;
 	overflow: hidden;
@@ -9,6 +10,8 @@
 		width: 25%;
 		text-align: center;
 		float: left;
+		background-position: center;
+		background-size: cover;
 	}
 	a {
 		display: table;
@@ -22,7 +25,7 @@
 	}
 	h3 {
 		font-size: 22px;
-		font-weight: 300;
+		font-weight: 200;
 		margin-bottom: 10px;
 		text-transform: uppercase;
 	}
@@ -30,3 +33,108 @@
 		font-size: 16px;
 	}
 }
+/* - snb */
+
+/* + solution-preview */
+.solution-preview {
+	position: relative;
+	padding-top: 240px;
+	text-align: center;
+	
+	h3 {
+		font-size: 22px;
+		font-weight: 200;
+		.spacing;
+	}	
+	.solution-wrap {		
+		padding-bottom: 254px;
+		.tit {
+			font-size: 56px;
+			padding: 10px 0 20px;
+			font-weight: bold;
+		}
+		.sub {
+			font-size: 22px;
+			font-weight: bold;
+			margin-bottom: 32px;
+		}
+		p {
+			font-size: 16px;
+		}
+	}
+	li {
+		position: relative;
+			}
+	.area-flex {
+		padding: 80px 0;
+		margin-bottom: 150px;
+		overflow: hidden;
+	}
+	.black-container {
+		position: relative;
+		z-index: 2;
+		width: 330px;
+		height: 42 0px;
+		padding: 0 50px 120px;
+		background-color: #000;
+		text-align: left;		
+		word-break: keep-all;
+		border-top: 1px solid #000;
+		.num {
+			margin-top: -110px;
+			color: @num;
+			font-size: 120px;
+			font-weight: 600;
+			opacity: .7;
+			&.left {
+				text-align: left;
+			}
+			&.right {
+				text-align: right;
+			}
+		}
+		h4 {
+			font-size: 48px;
+			font-weight: 600;
+			margin: 2px 0 16px;
+		}
+		.sub {
+			font-size: 16px;
+			font-weight: 400;
+		}
+		p {
+			font-size: 16px;
+			line-height: 1.8;
+		}
+		&.fl-right {
+			float: right;
+		}
+	}
+	.img-url {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 1;
+		background-repeat: no-repeat;
+		&.right {
+			background-position: right; 
+		}
+		&.left {
+			background-position: left;
+		}
+	}
+	ol {
+		max-width: 2000px;
+		margin: auto;
+	}
+}
+/* - solution-preview */
+
+
+/* + news-slide */
+.news-slide {
+	
+}
+/* + news-slide */
