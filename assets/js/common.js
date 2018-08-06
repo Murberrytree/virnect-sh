@@ -33,23 +33,30 @@ var mainPer = (function () {
 	}
 
 	function slide() {
-		var $newslArea = $(".news-slide ul");
+		var $newslArea = $(".news-container section");
 		$newslArea.slick({
 			dots: false,
 			arrows: false,
 			slidesToShow: 4,
-			slidesToScroll: 1,
+			slidesToScroll: 4,
 			responsive: [
 				{
 					breakpoint: 767,
 					settings: {
-						slidesToShow: 1,
-						slidesToScroll: 1,
+						slidesToShow: 2,
+						slidesToScroll: 2,
 						dots: true
+					}
+				},
+				{
+					breakpoint: 479,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
 					}
 				}
 			]
-		})
+		});
 	}
 
 //	function sideBar() {

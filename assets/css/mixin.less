@@ -10,6 +10,9 @@
 @baseColor: #1a1a1b;
 @fog: #B2B2B2;
 @num: #d1d0d1;
+@date: #999;
+@sub: #646465;
+@more: rgba(255,255,255,.2);
 
 //device
 @desktop : 1199px;
@@ -32,6 +35,17 @@
   }
 }
 
+// default class
+.h-heading {
+	position: absolute;
+	left: -9999px;
+	top: -9999px;
+}
+
+.img-url {
+	background-position: center;
+}
+
 // mixin class
 .box-shadow( @x: 0; @y: 0; @blur: 0; @color: rgba(0,0,0,.2) ) {
 	-webkit-box-shadow: @arguments;
@@ -39,3 +53,6 @@
 	box-shadow: @arguments;
 }
 
+.cursor {
+	cursor: pointer;
+}

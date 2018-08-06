@@ -24,3 +24,14 @@
     box-sizing: border-box;
   }
 }
+.h-heading {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+.img-url {
+  background-position: center;
+}
+.cursor {
+  cursor: pointer;
+}

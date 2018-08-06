@@ -24,6 +24,17 @@
     box-sizing: border-box;
   }
 }
+.h-heading {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+.img-url {
+  background-position: center;
+}
+.cursor {
+  cursor: pointer;
+}
 /* Slider */
 .slick-loading .slick-list {
   background: #ffffff url('../images/common/ajax-loader.gif') center center no-repeat;
@@ -252,14 +263,6 @@
 .slick-arrow.slick-hidden {
   display: none;
 }
-.h-heading {
-  position: absolute;
-  left: -9999px;
-  top: -9999px;
-}
-.img-url {
-  background-position: center;
-}
 /* + Header */
 .header {
   position: fixed;
@@ -267,6 +270,7 @@
   left: 0;
   width: 100%;
   padding: 70px 0;
+  z-index: 100;
   transition: all .5s;
 }
 .header .area-flex {
@@ -377,6 +381,51 @@ h1 a {
   }
 }
 /* - Header */
+/* + main fsc */
+.main .full-visual-container .area-flex {
+  margin-top: 300px;
+}
+.main .full-visual-container .tit {
+  font-size: 48px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.main .full-visual-container .tit .thin {
+  font-weight: 100;
+}
+.main .full-visual-container .sub {
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: 'Noto Sans Korean';
+  margin-bottom: 40px;
+}
+.main .more {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  line-height: 44px;
+  font-size: 15px;
+  font-family: 'Noto Sans Korean';
+  padding: 0 20px;
+}
+.main .more.arrow {
+  background: url("../images/btn_main_img_arrow_w.png") no-repeat 106px;
+  padding-right: 60px;
+}
+.main .more.upper {
+  text-transform: uppercase;
+}
+.main .more.pulple {
+  border: 1px solid #6700ff;
+}
+.main .more.pulple.arrow {
+  background-position: 120px;
+  line-height: 54px;
+  padding: 0 24px;
+  padding-right: 60px;
+  font-size: 14px;
+}
+/* + snb */
 .snb {
   width: 100%;
   overflow: hidden;
@@ -407,6 +456,8 @@ h1 a {
 .snb p {
   font-size: 16px;
 }
+/* - snb */
+/* + solution-preview */
 .solution-preview {
   position: relative;
   padding-top: 240px;
@@ -445,7 +496,7 @@ h1 a {
   position: relative;
   z-index: 2;
   width: 330px;
-  height: 420px;
+  height: 42 0px;
   padding: 0 50px 120px;
   background-color: #000;
   text-align: left;
@@ -481,6 +532,9 @@ h1 a {
 .solution-preview .black-container.fl-right {
   float: right;
 }
+.solution-preview .black-container .more {
+  margin-top: 36px;
+}
 .solution-preview .img-url {
   position: absolute;
   left: 0;
@@ -499,6 +553,62 @@ h1 a {
 .solution-preview ol {
   max-width: 2000px;
   margin: auto;
+}
+/* - solution-preview */
+/* + news-slide */
+.news-container {
+  text-align: center;
+  padding: 146px 0 140px;
+}
+.news-container h3 {
+  font-size: 40px;
+}
+.news-container .sub {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #646465;
+}
+.news-container section {
+  font-family: 'Noto Sans Korean';
+  text-align: left;
+}
+.news-container article {
+  margin: 0 20px;
+}
+.news-container .img-url {
+  height: 170px;
+  background-size: cover;
+}
+.news-container .tit {
+  margin-top: 10px;
+  line-height: 1.7;
+  font-size: 16px;
+}
+.news-container .date {
+  position: relative;
+  color: #999999;
+  text-transform: uppercase;
+  margin-top: 12px;
+  padding-top: 12px;
+  font-weight: 300;
+}
+.news-container .date:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 1px;
+  background-color: #999999;
+}
+.news-container a {
+  outline: none;
+}
+/* - news-slide */
+/* + company introduce */
+.intro-container {
+  padding: 120px 0;
+  background-image: url("../images/img_main_contact.jpg");
 }
 .full-visual-container {
   display: table;
@@ -519,7 +629,11 @@ h1 a {
 }
 #footer .area-flex {
   position: relative;
-  overflow: hidden;
+}
+#footer .area-flex:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 #footer h2 {
   float: left;
@@ -574,6 +688,20 @@ h1 a {
 }
 #footer .lang a {
   color: #b2b2b2;
+}
+#footer #topScroll {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: -111px;
+  width: 50px;
+  height: 50px;
+  line-height: 60px;
+  background: url("../images/top.png") #6700ff no-repeat center 12px;
+  font-size: 13px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
 }
 .mobile-show {
   display: none;

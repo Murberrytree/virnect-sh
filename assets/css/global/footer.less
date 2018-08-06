@@ -3,15 +3,20 @@
 @import url("../mixin.less");
 @Fh2Width : 290px;
 @dtWidth : 80px;
+@fPdTop : 86px;
 
 #footer {
-	padding: 86px 0 188px;
+	padding: @fPdTop 0 188px;
 	font-weight: normal;
 	font-size: 15px;
 	line-height: 1;
 	.area-flex {
 		position: relative;
-		overflow: hidden;
+		&:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
 	}
 	h2 {
 		float: left;
@@ -66,5 +71,19 @@
 		a {
 			color: @fog;			
 		}
+	}
+	#topScroll {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin-top: -@fPdTop - 25px;
+		width: 50px;
+		height: 50px;
+		line-height: 60px;
+		background: url("../images/top.png") @point no-repeat center 12px;
+		font-size: 13px;
+		text-align: center;
+		color: #fff;
+		.cursor;
 	}
 }
