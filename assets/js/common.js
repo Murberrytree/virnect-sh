@@ -4,7 +4,7 @@ var mainPer = (function () {
 		header();
 		imgUrl();
 		slide();
-//		sideBar();
+		sideBar();
 	}
 
 	function header() {
@@ -84,7 +84,17 @@ var mainPer = (function () {
 //			}
 //		});
 //	}
-
+	function sideBar() {
+		var 
+			$side = $(".side"),
+			$mGnb = $(".m-gnb"),
+			$document = $("body");
+		$side.click(function(){
+			var $this = $(this);
+			$mGnb.toggleClass("m-show");
+			$document.toggleClass("m-show");
+		});
+	}
 	return {
 		init: init
 	};

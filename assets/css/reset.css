@@ -220,6 +220,7 @@ input[type=submit] {
   background: transparent;
   cursor: pointer;
   font-family: 'Poppins', 'Noto Sans Korean', sans-serif;
+  outline: none;
 }
 caption {
   display: none;

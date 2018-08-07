@@ -41,8 +41,9 @@
   background-size: cover;
 }
 #footer {
+  position: relative;
+  z-index: 1;
   padding: 86px 0 188px;
-  font-weight: normal;
   font-size: 15px;
   line-height: 1;
 }

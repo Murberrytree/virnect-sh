@@ -40,9 +40,31 @@
   background-attachment: fixed;
   background-size: cover;
 }
-/* + main fsc */
-.main .full-visual-container {
+.zIndex {
   position: relative;
+  z-index: 1;
+}
+.purpleTransition {
+  transition: background-color 0.5s;
+}
+.purpleTransition:hover {
+  background-color: #6700ff;
+}
+/* + main fsc */
+.main {
+  overflow: hidden;
+}
+.main .fixed-dummy {
+  position: relative;
+  z-index: -1;
+  height: 100vh;
+}
+.main .full-visual-container {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  z-index: 0;
+  width: 100%;
 }
 .main .full-visual-container .area-flex {
   margin-top: 300px;
@@ -71,6 +93,7 @@
   font-size: 15px;
   font-family: 'Noto Sans Korean';
   padding: 0 20px;
+  transition: background-color 0.5s;
 }
 .main .more.arrow {
   background: url("../images/btn_main_img_arrow_w.png") no-repeat 106px;
@@ -89,6 +112,9 @@
   padding-right: 60px;
   font-size: 14px;
 }
+.main .more:hover {
+  background-color: #6700ff;
+}
 .main .light .more.arrow {
   background: url("../images/btn_main_img_arrow_b.png") no-repeat 120px;
 }
@@ -96,18 +122,24 @@
 .snb {
   width: 100%;
   overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 .snb li {
   width: 25%;
   text-align: center;
   float: left;
-  background-position: center;
-  background-size: cover;
+  overflow: hidden;
 }
 .snb a {
   display: table;
   height: 320px;
-  width: 100%;
+  width: 100.1%;
+  background-size: cover;
+  transition: transform .4s;
+}
+.snb a:hover {
+  transform: scale(1.1);
 }
 .snb div {
   display: table-cell;
@@ -126,9 +158,11 @@
 /* - snb */
 /* + solution-preview */
 .solution-preview {
-  position: relative;
   padding-top: 240px;
+  padding-bottom: 140px;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 .solution-preview h3 {
   font-size: 22px;
@@ -163,6 +197,9 @@
   padding: 80px 0;
   margin-bottom: 150px;
   overflow: hidden;
+}
+.solution-preview .margin0 {
+  margin-bottom: 0;
 }
 .solution-preview .black-container {
   position: relative;
@@ -231,6 +268,8 @@
 .news-container {
   text-align: center;
   padding: 146px 0 140px;
+  position: relative;
+  z-index: 1;
 }
 .news-container h3 {
   font-size: 40px;
@@ -282,6 +321,8 @@
   text-align: center;
   padding: 128px 0 142px;
   background-size: cover;
+  position: relative;
+  z-index: 1;
 }
 .careear-container h3 {
   font-size: 20px;
@@ -335,6 +376,10 @@
   font-weight: 500;
   font-size: 15px;
   text-align: center;
+  transition: background-color 0.5s;
+}
+.intro-container .download:hover {
+  background-color: #6700ff;
 }
 .intro-container .virnect-simbol {
   position: absolute;

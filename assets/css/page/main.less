@@ -2,10 +2,32 @@
 
 @import url("../mixin.less");
 
+.zIndex {
+	position: relative;
+	z-index: 1;
+}
+
+.purpleTransition {
+	transition: background-color .5s;
+	&:hover {
+		background-color: @point;
+	}
+}
+
 /* + main fsc */
 .main {
-	.full-visual-container {
+	overflow: hidden;
+	.fixed-dummy {
 		position: relative;
+		z-index: -1;
+		height: 100vh;
+	}
+	.full-visual-container {
+		position: fixed;
+		overflow: hidden;
+		top: 0;
+		z-index: 0;
+		width: 100%;
 		.area-flex {
 			margin-top: 300px;
 			position: relative;
@@ -34,6 +56,7 @@
 		font-size: 15px;
 		font-family: @noto;
 		padding: 0 20px;
+		transition: background-color .5s;
 		&.arrow {
 			background: url("../images/btn_main_img_arrow_w.png") no-repeat 106px;
 			padding-right: 60px;
@@ -51,6 +74,7 @@
 				font-size: 14px;
 			}
 		}
+		.purpleTransition
 	}
 	.light {
 		.more {
@@ -65,19 +89,24 @@
 .snb {
 	width: 100%;
 	overflow: hidden;
+	.zIndex;
 	li {		
 		width: 25%;
 		text-align: center;
 		float: left;
-		background-position: center;
-		background-size: cover;
+		overflow: hidden;
 	}
 	a {
 		display: table;
 		height: 320px;
-		width: 100%;
+		width: 100.1%;
+		background-size: cover;
+		transition: transform .4s;
+		&:hover {
+			transform: scale(1.1);
+		}
 	}
-	div {
+	div { 
 		display: table-cell;		
 		width: 100%;
 		vertical-align: middle;
@@ -98,7 +127,9 @@
 .solution-preview {
 	position: relative;
 	padding-top: 240px;
+	padding-bottom: 140px;
 	text-align: center;	
+	.zIndex;
 	h3 {
 		font-size: 22px;
 		font-weight: 200;
@@ -127,11 +158,14 @@
 	}
 	li {
 		position: relative;
-			}
+	}
 	.area-flex {
 		padding: 80px 0;
 		margin-bottom: 150px;
-		overflow: hidden;
+		overflow: hidden;		
+	}
+	.margin0 {
+		margin-bottom: 0;
 	}
 	.black-container {
 		position: relative;
@@ -203,6 +237,7 @@
 .news-container {
 	text-align: center;
 	padding: 146px 0 140px;
+	.zIndex;
 	h3 {
 		font-size: 40px
 	}
@@ -255,6 +290,7 @@
 	text-align: center;
 	padding: 128px 0 142px;
 	background-size: cover;
+	.zIndex;
 	h3 {
 		font-size: 20px;
 		font-weight: 300;
@@ -286,7 +322,7 @@
 	padding: 120px 0;
 	background-color: #1d1e25;
 	overflow: hidden;
-	line-height: 60px;
+	line-height: 60px;	
 	.area-flex {
 		position: relative;
 		z-index: 2;
@@ -308,6 +344,7 @@
 		font-weight: 500;
 		font-size: 15px;
 		text-align: center;
+		.purpleTransition
 	}
 	.virnect-simbol {
 		position: absolute;

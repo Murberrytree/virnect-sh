@@ -7,14 +7,18 @@
 @import url("global/header.less");
 @import url("page/main.less");
 @import url("global/fsVisual.less");
+
 @import url("global/footer.less");
 
 .video {
 	position: absolute;
-	left: 0;
+	left: 50%;
 	top: 0;
-	width: 100%;
-	z-index: 1;
+	transform: translateX(-50%);
+	z-index: 0;
+	@media (min-width: @fhd) {
+		width: 100%;
+	}
 }
 
 // mobile
