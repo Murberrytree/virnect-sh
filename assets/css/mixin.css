@@ -35,3 +35,8 @@
 .cursor {
   cursor: pointer;
 }
+.fixed-bg {
+  position: static;
+  background-attachment: fixed;
+  background-size: cover;
+}

@@ -5,8 +5,11 @@
 /* + main fsc */
 .main {
 	.full-visual-container {
+		position: relative;
 		.area-flex {
 			margin-top: 300px;
+			position: relative;
+			z-index: 2;
 		}
 		.tit {
 			font-size: 48px;
@@ -49,6 +52,14 @@
 			}
 		}
 	}
+	.light {
+		.more {
+			&.arrow {
+				background: url("../images/btn_main_img_arrow_b.png") no-repeat 120px;
+				
+			}
+		}
+	}
 }
 /* + snb */
 .snb {
@@ -87,14 +98,15 @@
 .solution-preview {
 	position: relative;
 	padding-top: 240px;
-	text-align: center;
-	
+	text-align: center;	
 	h3 {
 		font-size: 22px;
 		font-weight: 200;
 		.spacing;
 	}	
-	.solution-wrap {		
+	.solution-wrap {
+		position: relative;
+		z-index: 2;
 		padding-bottom: 254px;
 		.tit {
 			font-size: 56px;
@@ -109,6 +121,9 @@
 		p {
 			font-size: 16px;
 		}
+	}
+	.video {
+		top: 180px;
 	}
 	li {
 		position: relative;
@@ -238,11 +253,70 @@
 /* + careear-container */
 .careear-container {
 	text-align: center;
+	padding: 128px 0 142px;
+	background-size: cover;
+	h3 {
+		font-size: 20px;
+		font-weight: 300;
+	}
+	.tit {
+		font-size: 40px;
+		font-weight: 200;
+		margin: 4px 0 11px;
+		strong {
+			font-weight: 600;
+		}
+	}
+	.sub {
+		font-size: 16px;
+		line-height: 1.7;	
+		color: @sub;
+	}
+	.count {
+		color: @count;
+		font-size: 210px;
+		font-weight: bold;
+		margin: -52px 0;
+	}
 }
 
 /* + company introduce */
 .intro-container {
+	position: relative;
 	padding: 120px 0;
-	background-image: url("../images/img_main_contact.jpg");
-	background-color: rgba(0,0,0,.2);
+	background-color: #1d1e25;
+	overflow: hidden;
+	line-height: 60px;
+	.area-flex {
+		position: relative;
+		z-index: 2;
+	}
+	h3 {
+		float:left;
+		font-size: 22px;
+		font-weight: 300;
+		a {
+			text-decoration: underline;
+			font-weight: normal;
+		}
+	}
+	.download {
+		display: inline-block;
+		float: right;
+		border: 1px solid @more;
+		width: 280px;		
+		font-weight: 500;
+		font-size: 15px;
+		text-align: center;
+	}
+	.virnect-simbol {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		background-position: 30% center;
+		background-repeat: no-repeat;
+	}
 }

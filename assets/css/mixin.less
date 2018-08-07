@@ -13,6 +13,7 @@
 @date: #999;
 @sub: #646465;
 @more: rgba(255,255,255,.2);
+@count: #3a3a3c;
 
 //device
 @desktop : 1199px;
@@ -46,13 +47,19 @@
 	background-position: center;
 }
 
+.cursor {
+	cursor: pointer;
+}
+
+.fixed-bg {
+	position: static;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
 // mixin class
 .box-shadow( @x: 0; @y: 0; @blur: 0; @color: rgba(0,0,0,.2) ) {
 	-webkit-box-shadow: @arguments;
 	-moz-box-shadow: @arguments;
 	box-shadow: @arguments;
-}
-
-.cursor {
-	cursor: pointer;
 }
