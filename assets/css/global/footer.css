@@ -40,6 +40,34 @@
   background-attachment: fixed;
   background-size: cover;
 }
+.over-hidden {
+  overflow: hidden;
+}
+.mobile-show {
+  display: none;
+}
+@media (max-width: 479px) {
+  .mobile-show {
+    display: block;
+  }
+}
+.mobile-hidden {
+  display: block;
+}
+@media (max-width: 479px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
+i.mobile-hidden {
+  display: block;
+  display: inline-block;
+}
+@media (max-width: 479px) {
+  i.mobile-hidden {
+    display: none;
+  }
+}
 #footer {
   position: relative;
   z-index: 1;
@@ -59,18 +87,47 @@
   float: left;
   width: 290px;
 }
+@media (max-width: 767px) {
+  #footer h2 {
+    width: 100%;
+    float: none;
+  }
+}
+@media (max-width: 479px) {
+  #footer h2 img {
+    width: 140px;
+  }
+}
 #footer address {
   float: left;
   width: calc(100% - 290px);
   overflow: hidden;
 }
+@media (max-width: 767px) {
+  #footer address {
+    width: 100%;
+    float: none;
+    margin-top: 28px;
+  }
+}
+@media (max-width: 479px) {
+  #footer address {
+    font-size: 12px;
+  }
+}
 #footer dl {
   overflow: hidden;
+  line-height: 1.6;
 }
 #footer dt {
   width: 80px;
   float: left;
   font-weight: bold;
+}
+@media (max-width: 479px) {
+  #footer dt {
+    width: 70px;
+  }
 }
 #footer dd {
   width: calc(100% - 80px);
@@ -85,6 +142,18 @@
   font-family: 'Noto Sans Korean';
   color: #b2b2b2;
   font-weight: 300;
+  clear: both;
+}
+@media (max-width: 1199px) {
+  #footer .copy {
+    position: relative;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 479px) {
+  #footer .copy {
+    font-size: 12px;
+  }
 }
 #footer .sns {
   margin-top: 20px;
@@ -92,6 +161,14 @@
 #footer .sns li {
   display: inline-block;
   margin-right: 4px;
+}
+@media (max-width: 479px) {
+  #footer .sns {
+    margin-top: 10px;
+  }
+  #footer .sns img {
+    width: 24px;
+  }
 }
 #footer .lang {
   position: absolute;
@@ -109,6 +186,12 @@
 #footer .lang a {
   color: #b2b2b2;
 }
+@media (max-width: 479px) {
+  #footer .lang {
+    font-size: 12px;
+    right: 24px;
+  }
+}
 #footer #topScroll {
   position: absolute;
   top: 0;
@@ -122,4 +205,18 @@
   text-align: center;
   color: #fff;
   cursor: pointer;
+}
+@media (max-width: 479px) {
+  #footer {
+    padding: 40px 0 60px;
+  }
+  #footer #topScroll {
+    right: 24px;
+    width: 40px;
+    height: 40px;
+    background: url("../images/top.png") #6700ff no-repeat center 10px;
+    font-size: 11px;
+    line-height: 50px;
+    margin-top: -65px;
+  }
 }

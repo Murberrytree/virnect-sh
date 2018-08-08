@@ -40,6 +40,34 @@
   background-attachment: fixed;
   background-size: cover;
 }
+.over-hidden {
+  overflow: hidden;
+}
+.mobile-show {
+  display: none;
+}
+@media (max-width: 479px) {
+  .mobile-show {
+    display: block;
+  }
+}
+.mobile-hidden {
+  display: block;
+}
+@media (max-width: 479px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
+i.mobile-hidden {
+  display: block;
+  display: inline-block;
+}
+@media (max-width: 479px) {
+  i.mobile-hidden {
+    display: none;
+  }
+}
 /* + Header */
 .header {
   position: fixed;
@@ -61,11 +89,14 @@ h1 {
 }
 h1 a {
   display: inline-block;
-  padding: 18px 0;
+  padding: 18px 0 16px;
 }
 @media (max-width: 767px) {
   h1 {
     position: relative;
+  }
+  h1 a {
+    padding: 14px 0 10px;
   }
 }
 .if_top {
@@ -73,6 +104,9 @@ h1 a {
   padding: 30px 0;
 }
 @media (max-width: 767px) {
+  .if_top {
+    padding: 10px 0;
+  }
   .if_top h1 img {
     width: 140px;
   }
@@ -85,6 +119,7 @@ h1 a {
 @media (max-width: 767px) {
   .if_scroll {
     background: #171717;
+    padding: 0;
   }
   .if_scroll h1 img {
     width: 140px;
@@ -178,6 +213,8 @@ h1 a {
   width: calc(100vw - 80px);
   display: none;
   height: 100vh;
+  font-family: 'Poppins';
+  font-weight: 200;
   background: #171717 no-repeat bottom;
   transition: right .6s;
 }
@@ -190,28 +227,42 @@ h1 a {
   padding: 20px 0;
   font-size: 15px;
 }
-.m-gnb ul li.active > a {
+.m-gnb ul li.active > a,
+.m-gnb ul li.active span {
   opacity: 1;
 }
-.m-gnb ul a {
+.m-gnb ul li.active ul {
+  padding: 14px 0;
+  margin: 10px 0;
+  height: auto;
+}
+.m-gnb ul a,
+.m-gnb ul span {
   display: inline-block;
   width: 100%;
   opacity: .5;
   padding: 14px 40px;
   text-transform: uppercase;
   transition: opacity .4s;
+  color: #fff;
+  cursor: pointer;
   letter-spacing: 1.2px;
 }
-.m-gnb ul a:hover {
+.m-gnb ul a:hover,
+.m-gnb ul span:hover {
   opacity: 1;
 }
 .m-gnb ul ul {
-  padding: 14px 0;
-  margin: 10px 0;
+  padding: 0;
+  margin: 0;
+  height: 0;
   background: #070707;
+  overflow: hidden;
+  transition: all .4s;
 }
 .m-gnb ul ul a {
   padding: 7px 40px;
+  font-size: 14px;
 }
 .m-gnb ul .lang {
   position: relative;
@@ -236,16 +287,45 @@ h1 a {
   display: none;
   position: absolute;
   right: 26px;
-  top: 18px;
-  width: 20px;
+  top: 14px;
+  width: 30px;
   height: 20px;
-  background: #ccc;
   z-index: 20;
 }
 @media (max-width: 767px) {
   .side {
     display: block;
   }
+}
+.side-layer {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  position: relative;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+}
+.side-layer:after,
+.side-layer:before {
+  display: block;
+  width: inherit;
+  height: 2px;
+  position: absolute;
+  background: inherit;
+  left: 0;
+  content: '';
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+}
+.side-layer:before {
+  bottom: 350%;
+}
+.side-layer:after {
+  top: 350%;
+  width: 60%;
+  left: auto;
+  right: 0;
 }
 .side-to {
   animation-name: side-slide;

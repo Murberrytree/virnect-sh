@@ -41,6 +41,9 @@
   background-attachment: fixed;
   background-size: cover;
 }
+.over-hidden {
+  overflow: hidden;
+}
 @font-face {
   font-family: 'Noto Sans Korean';
   font-style: normal;

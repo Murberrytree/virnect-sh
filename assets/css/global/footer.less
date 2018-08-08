@@ -22,19 +22,41 @@
 	h2 {
 		float: left;
 		width: @Fh2Width;
+		@media (max-width: @tablet) {
+			width: 100%;
+			float: none;
+		}
+		@media (max-width: @mobile) {
+			img {
+				width: 140px;
+			}
+		}
 	}
 	address {
 		float: left;
 		width: calc(~"100% -" @Fh2Width);
 		overflow: hidden;
+		@media (max-width: @tablet) {
+			width: 100%;
+			float: none;
+			margin-top: 28px;
+		}
+		@media (max-width: @mobile) {
+			font-size: 12px;
+		}
 	}
 	dl {
 		overflow: hidden;
+		line-height: 1.6;
 	}
 	dt {
 		width: @dtWidth;
 		float: left;
 		font-weight: bold;
+		@media (max-width: @mobile) {
+			@dtWidth : 70px;
+			width: @dtWidth;
+		}
 	}
 	dd {
 		width: calc(~"100%" - @dtWidth);
@@ -49,12 +71,24 @@
 		font-family: @noto;
 		color: @fog;
 		font-weight: 300;
+		clear: both;
+		@media (max-width: @desktop) {
+			position: relative;
+			margin-top: 20px;
+		}
+		@media (max-width: @mobile) {
+			font-size: 12px;
+		}
 	}
 	.sns {
 		margin-top: 20px;
 		li {
 			display: inline-block;
 			margin-right: 4px;
+		}
+		@media (max-width: @mobile) {
+			margin-top: 10px;
+			img {width: 24px;}
 		}
 	}
 	.lang {
@@ -72,6 +106,10 @@
 		a {
 			color: @fog;			
 		}
+		@media (max-width: @mobile) {
+			font-size: 12px;
+			right: 24px;
+		}
 	}
 	#topScroll {
 		position: absolute;
@@ -86,5 +124,18 @@
 		text-align: center;
 		color: #fff;
 		.cursor;
+	}
+	@media (max-width: @mobile) {		
+		@fPdTop : 40px;
+		padding: @fPdTop 0 60px;
+		#topScroll {
+			right: 24px;
+			width: 40px;
+			height: 40px;
+			background: url("../images/top.png") @point no-repeat center 10px;
+			font-size: 11px;
+			line-height: 50px;
+			margin-top: -@fPdTop - 25px;
+		}
 	}
 }

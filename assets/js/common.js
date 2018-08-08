@@ -2,9 +2,10 @@ var mainPer = (function () {
 
 	function init() {
 		header();
+		mobileImg();
 		imgUrl();
-		slide();
-		sideBar();
+		Mslide();
+		sideBar();		
 	}
 
 	function header() {
@@ -23,6 +24,19 @@ var mainPer = (function () {
 		});
 	}
 	
+	function mobileImg() {
+		var 
+			$solutionImg = $(".solution-preview .img-url"),
+			$winW = $(document).width();
+		if ( $winW < 480 ) {
+			$solutionImg.each(function(){
+				var $this = $(this),
+						$url = $this.attr("data-img");
+				$this.attr('data-img', $url.replace(/\img_/, 'img_m_'));
+			});
+		}		
+	}
+	
 	function imgUrl() {
 		$(".img-url").each(function () {
 			var $url = $(this).attr("data-img");
@@ -32,13 +46,14 @@ var mainPer = (function () {
 		});
 	}
 
-	function slide() {
+	function Mslide() {
 		var $newslArea = $(".news-container section");
 		$newslArea.slick({
 			dots: false,
 			arrows: false,
 			slidesToShow: 4,
 			slidesToScroll: 4,
+			infinite: false,
 			responsive: [
 				{
 					breakpoint: 767,
@@ -52,49 +67,35 @@ var mainPer = (function () {
 					breakpoint: 479,
 					settings: {
 						slidesToShow: 1,
-						slidesToScroll: 1
+						slidesToScroll: 1,
+						dots: true
 					}
 				}
 			]
 		});
 	}
 
-//	function sideBar() {
-//		var ckNum = 1,
-//			$nav = $(".nav"),
-//			$side = $(".side");
-//		$side.click(function () {
-//			$this = $(this);
-//			if (ckNum === 0) {
-//				$nav.stop().animate({
-//					right: "-300px"
-//				});
-//				$this.css({
-//					background: "url(images/common/menu.png) no-repeat"
-//				});
-//				ckNum = 1;
-//			} else {
-//				$nav.stop().animate({
-//					right: "0"
-//				});
-//				$this.css({
-//					background: "url(images/common/close.png) no-repeat"
-//				});
-//				ckNum = 0;
-//			}
-//		});
-//	}
 	function sideBar() {
-		var 
+		var
 			$side = $(".side"),
+			$sideInner = $(".side span"),
 			$mGnb = $(".m-gnb"),
-			$document = $("body");
+			$document = $("body"),
+			$mGnbBtn = $(".m-gnb>ul>li");
 		$side.click(function(){
 			var $this = $(this);
 			$mGnb.toggleClass("m-show");
 			$document.toggleClass("m-show");
+			$sideInner.toggleClass("side-from");
+			$sideInner.toggleClass("side-to");
+		});		
+		$mGnbBtn.click(function(){
+			var $this = $(this);
+			$mGnbBtn.removeClass("active");
+			$this.addClass("active");
 		});
 	}
+	
 	return {
 		init: init
 	};

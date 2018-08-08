@@ -23,10 +23,13 @@ h1 {
 	z-index: 10;
 	a {
 		display: inline-block;
-		padding: 18px 0;
+		padding: 18px 0 16px;
 	}
 	@media (max-width: @tablet) {
 		position: relative;
+		a {
+			padding: 14px 0 10px;
+		}
 	}
 }
 
@@ -34,6 +37,7 @@ h1 {
   background: rgba(0, 0, 0, 0);
   padding: 30px 0;
 	@media (max-width: @tablet) {
+		padding: 10px 0;
 		h1 img{
 			width: 140px;
 		}
@@ -46,6 +50,7 @@ h1 {
   color: rgba(50, 50, 50, 1);
 	@media (max-width: @tablet) {
 		background: @ifScroll;
+		padding: 0;
 		h1 img{
 			width: 140px;
 		}
@@ -144,6 +149,8 @@ h1 {
 	width: calc(~"100vw - 80px");
 	display: none;
 	height: 100vh;
+	font-family: @poppins;
+	font-weight: 200;
 	background: @ifScroll no-repeat bottom;
 	transition: right .6s;
 	@media (max-width: @tablet) {
@@ -154,29 +161,40 @@ h1 {
 		font-size: 15px;
 		li {
 			&.active {
-				>a {
+				>a, span {
 					opacity: 1;
+				}
+				ul {
+					padding: 14px 0;
+					margin: 10px 0;
+					height: auto;
 				}
 			}
 		}
-		a {
+		a, span {
 			display: inline-block;
 			width: 100%;
 			opacity: .5;
 			padding: 14px 40px;
 			text-transform: uppercase;
 			transition: opacity .4s;
+			color: #fff;
+			cursor: pointer;
 			.spacing;
 			&:hover {
 				opacity: 1;
 			}
 		}
 		ul {
-			padding: 14px 0;
-			margin: 10px 0;
+			padding: 0;
+			margin: 0;
+			height: 0;
 			background: @mGnb;
+			overflow: hidden;
+			transition: all .4s;
 			a {
 				padding: 7px 40px;
+				font-size: 14px;
 			}
 		}
 		.lang {
@@ -215,35 +233,64 @@ h1 {
   display: none;
 	position: absolute;
 	right: 26px;
-	top: 18px;
-	width: 20px;
+	top: 14px;
+	width: 30px;
 	height: 20px;
-	background: #ccc;
 	z-index: 20;
 	@media (max-width: @tablet) {
 		display: block;
 	}
 }
+.side-layer {
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	position: relative;
+	animation-duration: 300ms;
+	animation-timing-function: ease-in-out;
+	&:after, &:before {
+		display: block;
+		width: inherit;
+		height: 2px;
+		position: absolute;
+		background: inherit;
+		left: 0;
+		content: '';
+		animation-duration: 300ms;
+		animation-timing-function: ease-in-out;
+	}
+	&:before {
+		bottom: 350%;
+	}
+	&:after {
+		top: 350%;
+		width: 60%;
+		left: auto;
+		right: 0;
+	}
+}
+
 .side-to {
 	animation-name: side-slide;
 	animation-fill-mode: forwards;
-}
-.side-to:before {
-	animation-name: side-slide-before;
-	animation-fill-mode: forwards;
-}
-.side-to:after {
-	animation-name: side-slide-after;
-	animation-fill-mode: forwards;
+	&:before {
+		animation-name: side-slide-before;
+		animation-fill-mode: forwards;
+	}
+	&:after {
+		animation-name: side-slide-after;
+		animation-fill-mode: forwards;
+	}
 }
 .side-from {
 	animation-name: side-slide-from;
-}
-.side-from:before {
-	animation-name: side-slide-before-from;
-}
-.side-from:after {
-	animation-name: side-slide-after-from;
+	&:before {
+		animation-name: side-slide-before-from;
+	}
+	&:after {
+		animation-name: side-slide-after-from;
+	}
 }
 @keyframes side-slide {
 	0% {}

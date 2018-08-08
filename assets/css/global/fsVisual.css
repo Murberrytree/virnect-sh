@@ -40,6 +40,9 @@
   background-attachment: fixed;
   background-size: cover;
 }
+.over-hidden {
+  overflow: hidden;
+}
 .full-visual-container {
   display: table;
   width: 100%;
