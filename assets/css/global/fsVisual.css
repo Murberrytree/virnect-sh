@@ -82,27 +82,27 @@ i.mobile-hidden {
 .fsc-wrap .slash-img {
   margin: 15px 0 15px;
 }
-.about {
+.fsc-wrap .about {
   font-weight: 500;
   letter-spacing: 1.2px;
 }
-.about .tit {
+.fsc-wrap .about .tit {
   font-size: 20px;
   -webkit-text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   -moz-text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
-.about .sub {
+.fsc-wrap .about .sub {
   font-size: 48px;
   font-weight: 600;
 }
-.about .sub i {
+.fsc-wrap .about .sub i {
   font-weight: 100;
 }
-.about .fsc-wrap {
+.fsc-wrap .about .fsc-wrap {
   text-transform: uppercase;
 }
-.about .fsc-wrap .area-flex {
+.fsc-wrap .about .fsc-wrap .area-flex {
   margin-top: 400px;
 }
 .page-sub {
