@@ -11,32 +11,12 @@
 
 .fsc-wrap {
 	display: table-cell;
-	vertical-align: middle;
+	vertical-align: bottom;
 	text-align: left;
 	.slash-img {
 		margin: 15px 0 15px;
-	}
-}
-
-
-.about {	
-	.fsc-wrap {
-		text-transform: uppercase;
-		font-weight: 500;
-		.spacing;
-		.tit {
-			font-size: 20px;
-			.text-shadow(0, 1px ,4px);		
-		}
-		.sub {
-			font-size: 48px;
-			font-weight: 600;
-			i {
-				font-weight: 100;
-			}
-		}
-		.area-flex {
-			margin-top: 400px;
+		@media (max-width: @mobile) {
+			width: 9px;
 		}
 	}
 }
@@ -52,5 +32,18 @@
 	.tit {
 		font-size: 40px;
 		margin: 8px 0 32px;
+		word-break: keep-all;
+	}
+	@media (max-width: @mobile) {
+		padding: 56px 0 62px;
+		font-size: 14px;
+		.sub {
+			font-size: 14px;
+			font-weight: 300;
+		}
+		.tit {
+			font-size: 26px;
+			margin: 8px 0 16px;
+		}
 	}
 }

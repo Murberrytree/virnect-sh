@@ -26,13 +26,19 @@ var mainPer = (function () {
 	
 	function mobileImg() {
 		var 
-			$solutionImg = $(".solution-preview .img-url"),
+			$solutionImg = $(".responsive-img .img-url"),
+			$mobileImg = $(".responsive-img img"),
 			$winW = $(document).width();
 		if ( $winW < 480 ) {
 			$solutionImg.each(function(){
 				var $this = $(this),
 						$url = $this.attr("data-img");
 				$this.attr('data-img', $url.replace(/\img_/, 'img_m_'));
+			});
+			$mobileImg.each(function(){
+				var $this = $(this),
+						$url = $this.attr("src");
+				$this.attr('src', $url.replace(/\img_/, 'img_m_'));
 			});
 		}		
 	}

@@ -95,7 +95,7 @@ i.mobile-hidden {
   width: 100%;
 }
 .main .full-visual-container .area-flex {
-  margin-top: 300px;
+  margin-bottom: 100px;
   position: relative;
   z-index: 2;
 }
@@ -117,7 +117,7 @@ i.mobile-hidden {
 }
 @media (max-width: 479px) {
   .main .full-visual-container .area-flex {
-    margin-top: 230px;
+    margin-bottom: 56px;
   }
   .main .full-visual-container .tit {
     font-size: 28px;

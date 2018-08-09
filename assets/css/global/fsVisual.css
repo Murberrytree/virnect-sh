@@ -76,32 +76,16 @@ i.mobile-hidden {
 }
 .fsc-wrap {
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: bottom;
   text-align: left;
 }
 .fsc-wrap .slash-img {
   margin: 15px 0 15px;
 }
-.about .fsc-wrap {
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 1.2px;
-}
-.about .fsc-wrap .tit {
-  font-size: 20px;
-  -webkit-text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  -moz-text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-}
-.about .fsc-wrap .sub {
-  font-size: 48px;
-  font-weight: 600;
-}
-.about .fsc-wrap .sub i {
-  font-weight: 100;
-}
-.about .fsc-wrap .area-flex {
-  margin-top: 400px;
+@media (max-width: 479px) {
+  .fsc-wrap .slash-img {
+    width: 9px;
+  }
 }
 .page-sub {
   padding: 140px 0;
@@ -115,4 +99,19 @@ i.mobile-hidden {
 .page-sub .tit {
   font-size: 40px;
   margin: 8px 0 32px;
+  word-break: keep-all;
+}
+@media (max-width: 479px) {
+  .page-sub {
+    padding: 56px 0 62px;
+    font-size: 14px;
+  }
+  .page-sub .sub {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .page-sub .tit {
+    font-size: 26px;
+    margin: 8px 0 16px;
+  }
 }
