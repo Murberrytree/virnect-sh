@@ -1219,6 +1219,45 @@ h1 a {
   vertical-align: middle;
   text-align: left;
 }
+.fsc-wrap .slash-img {
+  margin: 15px 0 15px;
+}
+.about {
+  font-weight: 500;
+  letter-spacing: 1.2px;
+}
+.about .tit {
+  font-size: 20px;
+  -webkit-text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -moz-text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+.about .sub {
+  font-size: 48px;
+  font-weight: 600;
+}
+.about .sub i {
+  font-weight: 100;
+}
+.about .fsc-wrap {
+  text-transform: uppercase;
+}
+.about .fsc-wrap .area-flex {
+  margin-top: 400px;
+}
+.page-sub {
+  padding: 140px 0;
+  font-size: 16px;
+  font-family: 'Noto Sans Korean';
+}
+.page-sub .sub {
+  font-size: 20px;
+  font-weight: 300;
+}
+.page-sub .tit {
+  font-size: 40px;
+  margin: 8px 0 32px;
+}
 #footer {
   position: relative;
   z-index: 1;

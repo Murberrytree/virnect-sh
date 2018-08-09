@@ -71,6 +71,12 @@
 	box-shadow: @arguments;
 }
 
+.text-shadow( @x: 0; @y: 0; @blur: 0; @color: rgba(0,0,0,.2) ) {
+	-webkit-text-shadow: @arguments;
+	-moz-text-shadow: @arguments;
+	text-shadow: @arguments;
+}
+
 // mobile
 .mobile-show {
 	display: none;

@@ -44,6 +44,31 @@
 .over-hidden {
   overflow: hidden;
 }
+.mobile-show {
+  display: none;
+}
+@media (max-width: 479px) {
+  .mobile-show {
+    display: block;
+  }
+}
+.mobile-hidden {
+  display: block;
+}
+@media (max-width: 479px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
+i.mobile-hidden {
+  display: block;
+  display: inline-block;
+}
+@media (max-width: 479px) {
+  i.mobile-hidden {
+    display: none;
+  }
+}
 @font-face {
   font-family: 'Noto Sans Korean';
   font-style: normal;
@@ -193,6 +218,20 @@ body {
   font-weight: normal;
 }
 .light a {
+  color: #1a1a1b;
+}
+.navy {
+  background-color: #1a1e24;
+  color: #fff;
+}
+.navy a {
+  color: #fff;
+}
+.fog {
+  background-color: #f6f6f7;
+  color: #1a1a1b;
+}
+.fog a {
   color: #1a1a1b;
 }
 a {
