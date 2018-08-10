@@ -631,10 +631,9 @@ i.mobile-hidden {
     padding: 55px 0;
   }
   .intro-container h3 {
-    display: inline-block;
+    display: block;
     width: 48%;
     line-height: 40px;
-    vertical-align: top;
     font-size: 13px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     text-align: center;
@@ -645,11 +644,10 @@ i.mobile-hidden {
     border: 0;
   }
   .intro-container .download {
-    display: inline-block;
+    display: block;
     float: right;
     width: 48%;
     line-height: 40px;
     font-size: 13px;
-    vertical-align: top;
   }
 }

@@ -3,9 +3,11 @@ var mainPer = (function () {
 	function init() {
 		header();
 		mobileImg();
+		aboutSlide();
 		imgUrl();
 		Mslide();
-		sideBar();		
+		sideBar();
+		historyNav();
 	}
 
 	function header() {
@@ -28,6 +30,7 @@ var mainPer = (function () {
 		var 
 			$solutionImg = $(".responsive-img .img-url"),
 			$mobileImg = $(".responsive-img img"),
+			$mobileCeo = $(".about-ceo"),
 			$winW = $(document).width();
 		if ( $winW < 480 ) {
 			$solutionImg.each(function(){
@@ -39,6 +42,11 @@ var mainPer = (function () {
 				var $this = $(this),
 						$url = $this.attr("src");
 				$this.attr('src', $url.replace(/\img_/, 'img_m_'));
+			});
+			$mobileCeo.each(function(){
+				var $this = $(this),
+						$url = $this.attr("data-img");
+				$this.attr('data-img', $url.replace(/\img_/, 'img_m_'));
 			});
 		}		
 	}
@@ -53,8 +61,8 @@ var mainPer = (function () {
 	}
 
 	function Mslide() {
-		var $newslArea = $(".news-container section");
-		$newslArea.slick({
+		var $newsArea = $(".news-container section");
+		$newsArea.slick({
 			dots: false,
 			arrows: false,
 			slidesToShow: 4,
@@ -80,6 +88,21 @@ var mainPer = (function () {
 			]
 		});
 	}
+	
+	function aboutSlide() {
+		var $partners = $(".about-partners section"),
+				$winW = $(document).width();;
+		if ( $winW < 480 ) {
+			$partners.slick({
+				dots: true,
+				rows: 5,
+				arrows: false,
+				slidesToShow: 2,
+				slidesToScroll: 2,
+				infinite: false
+			});
+		}		
+	}
 
 	function sideBar() {
 		var
@@ -100,6 +123,14 @@ var mainPer = (function () {
 			$mGnbBtn.removeClass("active");
 			$this.addClass("active");
 		});
+	}
+	
+	function historyNav() {
+		var $historyNav = $('.history-nav li');
+		$historyNav.click(function(){
+			$historyNav.removeClass('active');
+			$(this).addClass('active');
+		})
 	}
 	
 	return {

@@ -163,6 +163,9 @@ h1 a {
   height: 4px;
   width: 100%;
   background-color: #6700ff;
+  border-left: 1px solid #6700ff;
+  border-right: 1px solid #6700ff;
+  margin-left: -1px;
 }
 #gnb li ul a {
   padding: 10px 27px;

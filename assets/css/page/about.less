@@ -99,7 +99,7 @@
 	}
 }
 
-.about-vision, .about-organization, .about-partners{
+.about-vision, .about-organization, .about-partners, .about-history{
 	.area-flex {
 		position: relative;
 	}
@@ -159,7 +159,11 @@
 	}
 	@media (max-width: @mobile) {
 		padding: 56px 0 382px;
-		text-align: center;
+		text-align: center;		
+		background-position: bottom;
+		background-color: @ceo;
+		background-size: 100%;
+		background-repeat: no-repeat;
 		.tit {
 			font-size: 26px;
 			line-height: 1.4;
@@ -188,10 +192,11 @@
 		top: 152px;
 		font-size: 44px;
 	}
-	ul {
+	section {
 		font-size: 0;
+		position: relative;
 	}
-	li {
+	article {
 		display: inline-block;
 		width: 200px;
 		height: 120px;
@@ -207,5 +212,125 @@
 			padding-bottom: 170px;
 			background-position: top;
 		}
+		.slick-dots {
+		bottom: -50px;
+			li {
+				margin: 0 -2px;
+			}			
+		}
+	}
+	@media (max-width: @mobile) {
+		padding: 56px 0 70px;
+		.ab {
+			top: 0;
+			font-size: 28px;
+		}
+		article {
+			border: 0;
+			width: 140px;
+			height: 84px;
+			padding: 2px 0;
+			background-size: 100%;
+			&:nth-child(-n+4), &:nth-child(n+37) {
+				padding-top: 2px;
+				background-position: center;
+			}
+			&:nth-child(n+37) {
+				padding-bottom: 2px;
+				background-position: center;
+			}
+		}
+	}
+}
+
+@import url('//fonts.googleapis.com/css?family=Roboto:700');
+
+.about-history {
+	position: relative;
+	.ab {
+		top: 134px;
+	}
+	.history-nav {
+		position: fixed;
+		left: 0;
+		top: 56%;		
+		li {
+			position: relative;
+			height: 30px;
+			width: 50px;
+			opacity: .2;
+			transition: all .5s;
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 0%;
+				height: 2px;
+				background: rgba(0,0,0,0);
+				transition: all .5s;
+			}
+			&.active {
+				opacity: 1;
+				&:before {
+					width: 100%;
+					background: rgba(0,0,0,1);
+				}
+			}
+		}
+		button {
+			position: absolute;
+			right: -64px;
+			top: -11px;
+			font-family: @roboto;
+			font-weight: bold;
+			font-size: 16px;font-weight: bold;
+			font-size: 16px;
+		}
+	}
+	.right-align {
+		padding: 260px 0 250px 50px;
+		border-left: 1px solid @num;
+	}
+	h4 {
+		position: absolute;
+		left: -210px;
+		margin-top: -20px;
+		font-size: 44px;
+		color: @year;
+		font-weight: bold;	
+		font-family: @roboto;
+		&:after {
+			content: "";
+			position: absolute;
+			right: -70px;
+			top: 25px;
+			width: 20px;
+			height: 20px;
+			border-radius: 10px;
+			background: @point;
+		}
+	}
+	.history-container {
+		position: relative;
+	}
+	
+	dt {
+		font-family: @roboto;
+		font-size: 18px;
+		position: absolute;
+		left: 0;
+	}
+	dd {
+		padding-left: 40px;
+	}
+	ul {
+		margin-bottom: 58px;
+	}
+	li {
+		line-height: 26px;
+		margin-bottom: 24px;
+		font-size: 15px;
+		font-family: @noto;
 	}
 }
