@@ -7,7 +7,9 @@ var mainPer = (function () {
 		imgUrl();
 		Mslide();
 		sideBar();
+		subScrolled();
 		historyNav();
+		historyParallax();
 	}
 
 	function header() {
@@ -125,13 +127,76 @@ var mainPer = (function () {
 		});
 	}
 	
+	//history page
 	function historyNav() {
-		var $historyNav = $('.history-nav li');
+		var $historyNav = $('.history-nav li'),
+				$historyNavCon = $('.history-nav'),
+				$aboutSnb = $('.about-snb');
 		$historyNav.click(function(){
 			$historyNav.removeClass('active');
 			$(this).addClass('active');
+		});
+		$(window).scroll(function (){
+			var $scrTop = $(window).scrollTop();
+			//console.log($scrTop)
+			$aboutSnb.each(function(){
+				var $snbContainer = $('.page-sub'),
+						$snbTop = $snbContainer.offset().top,
+						$snbBottom = $snbTop + $snbContainer.outerHeight() - $aboutSnb.outerHeight();
+				
+				if ($snbBottom < $scrTop) {
+					$aboutSnb.addClass('sticky');
+					$aboutSnb.next().css({paddingTop : $aboutSnb.outerHeight()});
+					$historyNavCon.addClass('sticky');
+				} else {
+					$aboutSnb.removeClass('sticky')
+					$aboutSnb.next().css({paddingTop : 0});
+					$historyNavCon.removeClass('sticky');
+				}
+			});
+			$historyNav.each(function(){
+			var 
+			imagePos = $(this).offset().top,
+			$scrTop = $(window).scrollTop();
+				if (imagePos < $scrTop + 400) {
+					$(this).addClass("slideUp");
+				}
+			});
+		})		
+	}
+
+	
+	function historyParallax() {
+		$(window).scroll(function() {
+			$('.history-nav li').each(function(){
+			var 
+			imagePos = $(this).offset().top,
+			$scrTop = $(window).scrollTop();
+				if (imagePos < $scrTop + 400) {
+					$(this).addClass("slideUp");
+				}
+			});
 		})
 	}
+	
+	//sub page visual-container scroll effect
+	function subScrolled(){
+		var $winW = $(document).width();
+		var ScrollImage = $('.full-visual-container');
+		var windowScrolled;
+		$(window).scroll(function(){
+			windowScrolled = window.pageYOffset || document.documentElement.scrollTop;
+			if (ScrollImage.hasClass("full-visual-container")) {				
+					if ( $winW < 480 ) {
+						ScrollImage.css({opacity : (1 - (windowScrolled/26) / 20)});
+						console.log('mobile')
+					} else {
+						ScrollImage.css({opacity : (1 - (windowScrolled/42) / 20)});
+					}				
+				ScrollImage.css({transform : 'translateY(' + windowScrolled / + 3 + 'px)'});
+			} 
+		});  
+	};
 	
 	return {
 		init: init

@@ -1303,6 +1303,8 @@ h1 a {
 }
 .about-snb {
   border-bottom: 1px solid #d1d0d1;
+  width: 100%;
+  z-index: 2;
 }
 .about-snb li {
   display: inline-block;
@@ -1335,6 +1337,10 @@ h1 a {
   padding: 0;
   letter-spacing: 1.2px;
 }
+.about-snb.sticky {
+  position: fixed;
+  top: 72px;
+}
 @media (max-width: 479px) {
   .about-snb ul {
     text-align: center;
@@ -1347,6 +1353,9 @@ h1 a {
   }
   .about-snb button {
     height: 56px;
+  }
+  .about-snb.sticky {
+    top: 47.66px;
   }
 }
 .about-vision .area-flex,
@@ -1504,14 +1513,16 @@ h1 a {
 }
 .about-history {
   position: relative;
+  overflow: hidden;
 }
 .about-history .ab {
   top: 134px;
 }
 .about-history .history-nav {
   position: fixed;
-  left: 0;
+  left: -140px;
   top: 56%;
+  transition: left .6s;
 }
 .about-history .history-nav li {
   position: relative;
@@ -1544,6 +1555,26 @@ h1 a {
   font-family: 'Roboto';
   font-weight: bold;
   font-size: 16px;
+}
+.about-history .history-nav.sticky {
+  display: block;
+  left: 0;
+}
+.about-history .history-pallarax li {
+  position: absolute;
+}
+.about-history .history-pallarax li:first-child {
+  left: -30%;
+  right: auto;
+  top: 30%;
+}
+.about-history .history-pallarax li:last-child {
+  left: auto;
+  right: -20%;
+  top: 55%;
+}
+.about-history .history-pallarax img {
+  width: 500px;
 }
 .about-history .right-align {
   padding: 260px 0 250px 50px;
@@ -1580,7 +1611,7 @@ h1 a {
 .about-history dd {
   padding-left: 40px;
 }
-.about-history ul {
+.about-history dd ul {
   margin-bottom: 58px;
 }
 .about-history li {

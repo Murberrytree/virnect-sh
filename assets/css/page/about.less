@@ -52,6 +52,8 @@
 
 .about-snb {
 	border-bottom: 1px solid @num;
+	width: 100%;
+	z-index: 2;
 	li {
 		display: inline-block;
 		opacity: .5;
@@ -83,6 +85,10 @@
 		padding: 0;
 		.spacing;
 	}
+	&.sticky {
+		position: fixed;
+		top: 72px;
+	}
 	@media (max-width: @mobile) {
 		ul{
 			text-align: center;
@@ -96,7 +102,10 @@
 		button {
 			height: 56px;
 		}
-	}
+		&.sticky {
+			top: 47.66px;
+		}
+	}	
 }
 
 .about-vision, .about-organization, .about-partners, .about-history{
@@ -247,13 +256,16 @@
 
 .about-history {
 	position: relative;
+	overflow: hidden;
 	.ab {
 		top: 134px;
 	}
 	.history-nav {
 		position: fixed;
-		left: 0;
+		left: -140px;
 		top: 56%;		
+		
+		transition: left .6s;
 		li {
 			position: relative;
 			height: 30px;
@@ -286,6 +298,28 @@
 			font-weight: bold;
 			font-size: 16px;font-weight: bold;
 			font-size: 16px;
+		}
+		&.sticky {
+			display: block;
+			left: 0;
+		}
+	}
+	.history-pallarax {
+		li {
+			position: absolute;
+			&:first-child {
+				left: -30%;
+				right: auto;
+				top: 30%;
+			}
+			&:last-child {
+				left: auto;
+				right: -20%;
+				top: 55%;
+			}
+		}
+		img {
+			width: 500px;
 		}
 	}
 	.right-align {
@@ -323,10 +357,10 @@
 	}
 	dd {
 		padding-left: 40px;
-	}
-	ul {
-		margin-bottom: 58px;
-	}
+		ul {
+			margin-bottom: 58px;
+		}
+	}	
 	li {
 		line-height: 26px;
 		margin-bottom: 24px;
