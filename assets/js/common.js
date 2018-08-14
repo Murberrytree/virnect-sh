@@ -7,6 +7,7 @@ var mainPer = (function () {
 		imgUrl();
 		Mslide();
 		sideBar();
+		remoteSlide();
 		subScrolled();
 		historyClick();
 		historyNav();		
@@ -104,6 +105,17 @@ var mainPer = (function () {
 				infinite: false
 			});
 		}		
+	}
+	
+	function remoteSlide() {
+		var $newsArea = $(".remote-benefit-slide");
+		$newsArea.slick({
+			dots: false,
+			arrows: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			infinite: false
+		});
 	}
 
 	function sideBar() {

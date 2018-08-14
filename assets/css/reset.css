@@ -209,7 +209,8 @@ body {
   background-color: #171717;
   color: #fff;
 }
-.dark a {
+.dark a,
+.dark button {
   color: #fff;
 }
 .light {
@@ -217,21 +218,32 @@ body {
   color: #1a1a1b;
   font-weight: normal;
 }
-.light a {
+.light a,
+.light button {
   color: #1a1a1b;
 }
 .navy {
   background-color: #1a1e24;
   color: #fff;
 }
-.navy a {
+.navy a,
+.navy button {
   color: #fff;
 }
 .fog {
   background-color: #f6f6f7;
   color: #1a1a1b;
 }
-.fog a {
+.fog a,
+.fog button {
+  color: #1a1a1b;
+}
+.remote-fog {
+  background-color: #eff0f1;
+  color: #1a1a1b;
+}
+.remote-fog a,
+.remote-fog button {
   color: #1a1a1b;
 }
 a {
