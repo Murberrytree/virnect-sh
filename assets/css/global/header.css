@@ -175,7 +175,10 @@ h1 a {
   opacity: 1;
   color: #fff;
 }
-#gnb li.active ul,
+#gnb li:hover > a {
+  opacity: 1;
+  color: #fff;
+}
 #gnb li:hover ul {
   display: block;
 }

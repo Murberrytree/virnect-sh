@@ -105,12 +105,15 @@ h1 {
 				opacity: 1;
 				color: #fff;
 			}
+		}
+		&:hover {
+			>a {
+				opacity: 1;
+				color: #fff;
+			}
 			ul {
 				display: block;
 			}
-		}
-		@media (max-width: @tablet) {
-			
 		}
 	}
 	a {
@@ -137,13 +140,6 @@ h1 {
 }
 
 // mobile gnb
-
-.gnb-wrap {
-	@media (max-width: @tablet) {
-		
-	}			
-}
-
 .m-gnb {
 	position: fixed;
 	right: -100vw;
@@ -221,16 +217,6 @@ h1 {
 		right: 0;
 	}
 }
-
-//body {
-//	right: 0;
-//	transition: right .6s;
-//	&.m-show {
-//		position: fixed;
-//		z-index: 1;
-//		right: calc(~"100vw - 80px");
-//	}
-//}
 
 .side {
   display: none;

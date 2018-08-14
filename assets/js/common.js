@@ -8,8 +8,8 @@ var mainPer = (function () {
 		Mslide();
 		sideBar();
 		subScrolled();
-		historyNav();
-		historyParallax();
+		historyClick();
+		historyNav();		
 	}
 
 	function header() {
@@ -112,7 +112,8 @@ var mainPer = (function () {
 			$sideInner = $(".side span"),
 			$mGnb = $(".m-gnb"),
 			$document = $("body"),
-			$mGnbBtn = $(".m-gnb>ul>li");
+			$mGnbBtn = $(".m-gnb>ul>li")
+			;
 		$side.click(function(){
 			var $this = $(this);
 			$mGnb.toggleClass("m-show");
@@ -131,19 +132,16 @@ var mainPer = (function () {
 	function historyNav() {
 		var $historyNav = $('.history-nav li'),
 				$historyNavCon = $('.history-nav'),
-				$aboutSnb = $('.about-snb');
-		$historyNav.click(function(){
-			$historyNav.removeClass('active');
-			$(this).addClass('active');
-		});
+				$historyContainer = $('.history-container h4'),
+				$aboutSnb = $('.about-snb')
+				;
+		//연혁 스크롤시 snb 상단, 좌측 연혁 스티키 토글
 		$(window).scroll(function (){
 			var $scrTop = $(window).scrollTop();
-			//console.log($scrTop)
 			$aboutSnb.each(function(){
 				var $snbContainer = $('.page-sub'),
 						$snbTop = $snbContainer.offset().top,
-						$snbBottom = $snbTop + $snbContainer.outerHeight() - $aboutSnb.outerHeight();
-				
+						$snbBottom = $snbTop + $snbContainer.outerHeight() - $aboutSnb.outerHeight();				
 				if ($snbBottom < $scrTop) {
 					$aboutSnb.addClass('sticky');
 					$aboutSnb.next().css({paddingTop : $aboutSnb.outerHeight()});
@@ -152,48 +150,78 @@ var mainPer = (function () {
 					$aboutSnb.removeClass('sticky')
 					$aboutSnb.next().css({paddingTop : 0});
 					$historyNavCon.removeClass('sticky');
+					$historyContainer.removeClass('active');
 				}
-			});
-			$historyNav.each(function(){
-			var 
-			imagePos = $(this).offset().top,
-			$scrTop = $(window).scrollTop();
-				if (imagePos < $scrTop + 400) {
-					$(this).addClass("slideUp");
-				}
-			});
-		})		
-	}
-
-	
-	function historyParallax() {
-		$(window).scroll(function() {
-			$('.history-nav li').each(function(){
-			var 
-			imagePos = $(this).offset().top,
-			$scrTop = $(window).scrollTop();
-				if (imagePos < $scrTop + 400) {
-					$(this).addClass("slideUp");
-				}
-			});
+			})
 		})
 	}
+	
+	// 연혁 클릭시 스크롤 이동
+	function historyClick() {
+		var $historyNav = $('.history-nav li'),
+				$document = $("html, body"),
+				$winW = $(document).width(),
+				$historyContainer = $('.history-container'),
+				$offLeft = $('.right-align').offset().left;
+		if ( $winW < 480 ) {
+			$offLeft = $offLeft - 66.5
+		} else {
+			$offLeft = $offLeft - 159
+		}
+		$historyNav.click(function() {
+			var $idx = $(this).index(),
+					$scroll = $historyContainer.eq($idx).offset().top - 100;
+			$document.animate({scrollTop: $scroll});
+		})
+		$(window).scroll(function() {			
+			var $sct = $(window).scrollTop() + 100,
+					$activeH4 = $('.active h4');			
+			$historyContainer.each(function () {
+				var $idx = $(this).index(),
+						$scroll = $(this).offset().top - 100;
+				if ($sct > $scroll) {
+					$historyNav.removeClass("active");					
+					$historyNav.eq($idx).addClass("active");
+					$historyContainer.children('h4').removeClass("active");
+					$historyContainer.eq($idx).children('h4').addClass("active");
+					$('h4.active').css({left : $offLeft});
+				} else {
+					if ( $winW < 480 ) {
+					$historyContainer.eq($idx).children('h4').css({left : '-68px'});
+				} else {
+					$historyContainer.eq($idx).children('h4').css({left : '-210px'});
+				}
+				}
+			})
+		})
+	}
+
+//	function historyParallax() {
+//		$(window).scroll(function() {
+//			$('.history-nav li').each(function(){
+//			var 
+//			$scrTop = $(window).scrollTop();
+//				if ( < $scrTop + 400) {
+//					$(this).addClass("sticky");
+//				}
+//			});
+//		})
+//	}
 	
 	//sub page visual-container scroll effect
 	function subScrolled(){
 		var $winW = $(document).width();
-		var ScrollImage = $('.full-visual-container');
+		var $subParallax = $('.sub-parallax');
 		var windowScrolled;
 		$(window).scroll(function(){
 			windowScrolled = window.pageYOffset || document.documentElement.scrollTop;
-			if (ScrollImage.hasClass("full-visual-container")) {				
+			if ($(window).scrollTop() < 1100) {
 					if ( $winW < 480 ) {
-						ScrollImage.css({opacity : (1 - (windowScrolled/26) / 20)});
-						console.log('mobile')
+						$subParallax.css({opacity : (1 - (windowScrolled/26) / 20)});
 					} else {
-						ScrollImage.css({opacity : (1 - (windowScrolled/42) / 20)});
+						$subParallax.css({opacity : (1 - (windowScrolled/42) / 20)});
 					}				
-				ScrollImage.css({transform : 'translateY(' + windowScrolled / + 3 + 'px)'});
+				$subParallax.css({transform : 'translateY(' + windowScrolled / + 2 + 'px)'});
 			} 
 		});  
 	};

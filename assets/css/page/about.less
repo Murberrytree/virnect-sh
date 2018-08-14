@@ -53,7 +53,7 @@
 .about-snb {
 	border-bottom: 1px solid @num;
 	width: 100%;
-	z-index: 2;
+	z-index: 3;
 	li {
 		display: inline-block;
 		opacity: .5;
@@ -122,22 +122,32 @@
 	}
 }
 
-.about-vision {
-	padding: 134px 0 150px;
+.about-vision {	
 	font-size: 16px;
 	line-height: 1.8;
 	word-break: keep-all;
 	font-family: @noto;
+	.ab {
+		top: 126px;
+	}
+	.area-flex {
+		padding: 134px 0 150px;
+	}
 	.tit {
 		font-size: 32px;
 		font-weight: 200;
 		margin-bottom: 32px;
 		font-family: @poppins;
 	}
-	@media (max-width: @mobile) {
-		padding: 60px 0 56px;
+	@media (max-width: @mobile) {		
 		font-size: 15px;
 		line-height: 1.7;
+		.ab {
+			top: 0;
+		}
+		.area-flex {
+			padding: 60px 24px 56px;
+		}
 		.tit {
 			font-size: 22px;
 			margin-bottom: 22px;
@@ -262,6 +272,7 @@
 	}
 	.history-nav {
 		position: fixed;
+		z-index: 2;
 		left: -140px;
 		top: 56%;		
 		
@@ -303,10 +314,16 @@
 			display: block;
 			left: 0;
 		}
+		@media (max-width: @mobile) {
+			&.sticky {
+				display: none;
+			}
+		}
 	}
 	.history-pallarax {
 		li {
 			position: absolute;
+			z-index: 1;
 			&:first-child {
 				left: -30%;
 				right: auto;
@@ -323,8 +340,13 @@
 		}
 	}
 	.right-align {
+		position: relative;
+		z-index: 2;
 		padding: 260px 0 250px 50px;
 		border-left: 1px solid @num;
+	}	
+	.history-container {
+		position: relative;	
 	}
 	h4 {
 		position: absolute;
@@ -344,11 +366,12 @@
 			border-radius: 10px;
 			background: @point;
 		}
-	}
-	.history-container {
-		position: relative;
-	}
-	
+		&.active {
+			position: fixed;
+			top: 200px;
+			left: 407px;
+		}
+	}	
 	dt {
 		font-family: @roboto;
 		font-size: 18px;
@@ -366,5 +389,46 @@
 		margin-bottom: 24px;
 		font-size: 15px;
 		font-family: @noto;
+	}
+	@media (max-width: @mobile) {
+		.ab {
+			top:60px;
+		}
+		.right-align {
+			padding: 26px 0 150px;
+			margin-top: 110px;
+			margin-left: 68px;
+		}		
+		.history-container {
+			margin-bottom: 80px;					
+		}
+		h4 {
+			left: -68px;
+			top: -26px;
+			font-size: 22px;
+			&:after {
+				width: 12px;
+				height: 12px;
+				right: -23px;
+				top: 10px;
+			}
+			&.active {
+				top: 162px;
+				left: 25px;
+			}
+		}	
+		dt {
+			position: absolute;
+			left: -40px;
+		}
+		dd {
+			padding-left: 18px;
+			ul {
+				margin-bottom: 48px;
+			}
+		}	
+		li {
+			font-size: 14px;
+		}
 	}
 }
