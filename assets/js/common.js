@@ -8,6 +8,7 @@ var mainPer = (function () {
 		Mslide();
 		sideBar();
 		remoteSlide();
+		smartSlide();
 		subScrolled();
 		historyClick();
 		historyNav();		
@@ -108,13 +109,31 @@ var mainPer = (function () {
 	}
 	
 	function remoteSlide() {
-		var $newsArea = $(".remote-benefit-slide");
-		$newsArea.slick({
-			dots: false,
+		var $remoteArea = $(".remote-benefit-slide");
+		$remoteArea.slick({
+			dots: true,
 			arrows: false,
+			infinite: false,
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			infinite: false
+			dotsClass: 'custom-dots',
+			customPaging : function(slider, i) {
+        var title = $(slider.$slides[i]).data('title');
+        return '<button class="pager__item"> '+title+' </button>';
+    	}
+		});
+	}
+	
+	function smartSlide() {
+		var $smartArea = $(".smart-slide");
+		$smartArea.slick({
+			dots: true,
+			arrows: false,
+			infinite: false,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			prevArrow: ".slide-wrap .left",
+			nextArrow: ".slide-wrap .right"
 		});
 	}
 

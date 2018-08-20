@@ -1235,6 +1235,7 @@ h1 a {
   padding: 140px 0;
   font-size: 16px;
   font-family: 'Noto Sans Korean';
+  word-break: keep-all;
 }
 .page-sub .sub {
   font-size: 20px;
@@ -1688,10 +1689,10 @@ h1 a {
     font-size: 14px;
   }
 }
-.solution .fsc-wrap {
+#solution .fsc-wrap {
   text-align: center;
 }
-.solution .fsc-wrap .tit {
+#solution .fsc-wrap .tit {
   font-size: 20px;
   -webkit-text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   -moz-text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
@@ -1700,46 +1701,63 @@ h1 a {
   text-transform: uppercase;
   font-family: 'Poppins';
 }
-.solution .fsc-wrap .slogan {
+#solution .fsc-wrap .slogan {
   font-size: 20px;
   font-weight: 500;
   margin-top: 20px;
 }
-.solution .fsc-wrap .sub {
+#solution .fsc-wrap .sub {
   font-size: 60px;
   font-weight: bold;
   font-family: 'Poppins';
   margin: 10px 0 18px;
   letter-spacing: 1.2px;
 }
-.solution .fsc-wrap .sub i {
+#solution .fsc-wrap .sub i {
   font-weight: 100;
 }
-.solution .fsc-wrap p {
+#solution .fsc-wrap p {
   font-size: 24px;
   font-family: 'Noto Sans Korean';
   font-weight: 400;
 }
-.solution .fsc-wrap .area-flex {
+#solution .fsc-wrap .area-flex {
   margin-bottom: 240px;
 }
-.solution .fsc-wrap a {
+#solution .fsc-wrap a {
   display: inline-block;
   margin-top: 50px;
   background: url('../images/btn_main_img_arrow_w.png') no-repeat #6700ff 130px center;
   padding: 14px 74px 14px 24px;
 }
-.remote-feture {
+#solution .intro-container {
+  padding: 90px 0 ;
+  text-align: center;
+}
+#solution .intro-container h3 {
+  float: none;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+#solution .intro-container .download {
+  float: none;
+  margin: 0 20px;
+  width: 240px;
+}
+.remote {
+  overflow: hidden;
+}
+.remote .remote-feture {
   position: relative;
   padding: 150px 0 300px;
   text-align: center;
   word-break: keep-all;
 }
-.remote-feture .area-flex {
+.remote .remote-feture .area-flex {
   position: relative;
   overflow: hidden;
 }
-.remote-feture .area-flex:after {
+.remote .remote-feture .area-flex:after {
   content: "";
   position: absolute;
   left: 0;
@@ -1748,28 +1766,28 @@ h1 a {
   width: 100%;
   top: 50%;
 }
-.remote-feture dl {
+.remote .remote-feture dl {
   width: 300px;
   padding: 0 66px;
 }
-.remote-feture dl:first-child {
+.remote .remote-feture dl:first-child {
   float: left;
 }
-.remote-feture dl:last-child {
+.remote .remote-feture dl:last-child {
   float: right;
 }
-.remote-feture dt {
+.remote .remote-feture dt {
   font-size: 18px;
   font-weight: bold;
   padding-bottom: 21px;
   margin-bottom: 24px;
 }
-.remote-feture dd {
+.remote .remote-feture dd {
   font-size: 16px;
   line-height: 1.7;
   padding-bottom: 84px;
 }
-.remote-feture figure {
+.remote .remote-feture figure {
   position: absolute;
   z-index: 1;
   left: 50%;
@@ -1781,29 +1799,29 @@ h1 a {
   border-radius: 50%;
   line-height: 200px;
 }
-.remote-feture figure img {
+.remote .remote-feture figure img {
   vertical-align: middle;
 }
-.remote-mockup {
+.remote .remote-mockup {
   position: relative;
   padding-bottom: 60px;
   text-align: center;
 }
-.remote-mockup img {
+.remote .remote-mockup img {
   margin-top: -270px;
   width: 1440px;
 }
-.remote-contents {
+.remote .remote-contents {
   padding: 160px 0;
 }
-.remote-contents li {
+.remote .remote-contents li {
   position: relative;
   display: table;
   width: 100%;
   vertical-align: middle;
   margin: -24px 0;
 }
-.remote-contents li:before {
+.remote .remote-contents li:before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -1814,12 +1832,12 @@ h1 a {
   height: 1px;
   background: #d1d0d1;
 }
-.remote-contents li:after {
+.remote .remote-contents li:after {
   content: "";
   display: block;
   clear: both;
 }
-.remote-contents .circle-feature {
+.remote .remote-contents .circle-feature {
   display: table-cell;
   text-align: center;
   width: 220px;
@@ -1829,35 +1847,266 @@ h1 a {
   font-size: 15px;
   font-weight: 500;
 }
-.remote-contents .circle-feature img {
+.remote .remote-contents .circle-feature img {
   width: 90px;
   padding-top: 52px;
 }
-.remote-contents dl {
+.remote .remote-contents dl {
   display: table-cell;
   vertical-align: middle;
   padding-left: 80px;
   width: calc(100% - 300px);
   font-family: 'Noto Sans Korean';
 }
-.remote-contents dt {
+.remote .remote-contents dt {
   font-size: 19px;
   font-weight: 500;
   margin-bottom: 12px;
 }
-.remote-contents dd {
+.remote .remote-contents dd {
   font-size: 15px;
 }
 .remote-benefit {
   padding: 104px 0 137px;
+}
+.remote-benefit h3 {
+  font-size: 44px;
+  font-weight: 600;
+  margin-bottom: 38px;
+}
+.remote-benefit .area-flex:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.remote-benefit .benefit-content {
+  position: relative;
+  display: table;
+  width: 100%;
+  min-height: 140px;
+  margin-bottom: 38px;
+}
+.remote-benefit .benefit-content:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.remote-benefit .round-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 140px;
+  height: 140px;
+  line-height: 140px;
+  background: #eff0f1;
+  text-align: center;
+  border-radius: 50%;
+}
+.remote-benefit .round-img img {
+  vertical-align: middle;
+}
+.remote-benefit .remote-dl {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 172px;
+  font-family: 'Noto Sans Korean';
+}
+.remote-benefit .remote-dl dt {
+  font-size: 19px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.remote-benefit .remote-dl dd {
+  font-size: 15px;
+  line-height: 2;
+}
+.remote-benefit .remote-dl p:before {
+  content: "-";
+  display: inline-block;
+  padding-right: 5px;
+}
+.remote-benefit .smart-dl {
+  position: relative;
+  font-family: 'Noto Sans Korean';
+}
+.remote-benefit .smart-dl dt {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.remote-benefit .smart-dl dd {
+  font-size: 16px;
+  min-height: 262px;
+}
+.remote-benefit .smart-dl img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.remote-benefit .remote-benefit-slide {
+  float: right;
+  width: calc(100% - 240px);
 }
 .remote-benefit .remote-benefit-slide article {
   position: relative;
 }
 .remote-benefit .remote-benefit-slide .feature-img {
   position: absolute;
-  right: 0;
+  z-index: 2;
+  right: -240px;
+  bottom: -260px;
+  transition: transform 1.6s;
+  transform: translateX(200px);
+}
+.remote-benefit .slick-list {
+  overflow: visible;
+}
+.remote-benefit .slick-slide {
+  opacity: 0;
+  transition: opacity 1s;
+  color: #1a1a1b;
+  padding: 61px 80px;
+  background: #fff;
+  border-radius: 2px;
+  margin-right: 60px;
+}
+.remote-benefit .slick-slide img {
+  display: inline-block;
+}
+.remote-benefit .slick-active {
+  opacity: 1;
+}
+.remote-benefit .slick-active + article {
+  opacity: .2;
+}
+.remote-benefit .slick-active .feature-img {
+  transform: translateX(0);
+}
+.remote-benefit .custom-dots {
+  position: absolute;
+  top: 0;
+  right: calc(100% + 70px);
+  text-align: right;
+  width: 172px;
+}
+.remote-benefit .custom-dots button {
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.2;
+  margin-bottom: 50px;
+  line-height: 1.4;
+  text-align: right;
+  padding: 0;
+}
+.remote-benefit .custom-dots .slick-active button {
+  opacity: 1;
+  font-weight: bold;
+}
+.remote-padding {
+  padding: 90px 0;
+  background: #fff;
+}
+.smart {
+  overflow: hidden;
+}
+.smart .smart-feature {
+  padding: 190px 0 180px;
+}
+.smart .smart-feature .num {
+  font-size: 50px;
+  color: #b2b2b2;
+  font-family: 'Poppins';
+}
+.smart .smart-feature h3 {
+  position: relative;
+  font-size: 46px;
+  font-family: 'Noto Sans Korean';
+  padding-bottom: 28px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.smart .smart-feature h3:after {
+  content: "";
+  position: absolute;
+  left: 0;
   bottom: 0;
+  height: 2px;
+  width: 40px;
+  background: #b2b2b2;
+}
+.smart .smart-feature p {
+  font-size: 15px;
+  font-family: 'Noto Sans Korean';
+}
+.smart .smart-feature h3,
+.smart .smart-feature p {
+  width: 320px;
+  word-break: keep-all;
+}
+.smart .smart-feature li {
+  background-repeat: no-repeat;
+  min-height: 500px;
+  margin-bottom: 100px;
+}
+.smart .smart-feature .left {
+  background-position: right;
+}
+.smart .smart-feature .left h3,
+.smart .smart-feature .left p {
+  margin-right: auto;
+}
+.smart .smart-feature .right {
+  background-position: left;
+}
+.smart .smart-feature .right h3,
+.smart .smart-feature .right p {
+  margin-left: auto;
+}
+.smart .smart-variable {
+  text-align: center;
+  padding: 104px 0 160px;
+}
+.smart .smart-variable h3 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.smart .smart-variable .sub {
+  font-size: 16px;
+  margin-bottom: 52px;
+}
+.smart .smart-variable .area-flex {
+  position: relative;
+}
+.smart .smart-variable .round-img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: #fff;
+  display: inline-block;
+}
+.smart .smart-variable p {
+  font-size: 18px;
+  margin-top: 20px;
+}
+.smart .smart-variable .smart-slide-btn {
+  position: absolute;
+  z-index: 2;
+  top: 45%;
+  margin-top: -50px;
+  width: 40px;
+  height: 100px;
+  background: url(../images/arrow.png) no-repeat center;
+}
+.smart .smart-variable .left {
+  left: -44px;
+}
+.smart .smart-variable .right {
+  right: -44px;
+  transform: rotate(180deg);
+}
+.smart .smart-variable .slick-dots {
+  bottom: -70px;
 }
 #footer {
   position: relative;

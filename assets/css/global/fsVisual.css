@@ -91,6 +91,7 @@ i.mobile-hidden {
   padding: 140px 0;
   font-size: 16px;
   font-family: 'Noto Sans Korean';
+  word-break: keep-all;
 }
 .page-sub .sub {
   font-size: 20px;
