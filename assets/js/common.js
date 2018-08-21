@@ -10,7 +10,9 @@ var mainPer = (function () {
 		remoteSlide();
 		smartSlide();
 		subScrolled();
-		historyClick();
+//		historyClick();
+		recruitList();
+		recruitCategory();
 		historyNav();		
 	}
 
@@ -224,6 +226,30 @@ var mainPer = (function () {
 				}
 				}
 			})
+		})
+	}
+	
+	function recruitCategory() {
+		var $recruitCategory = $('.recruit-category li');
+		$recruitCategory.each(function(){
+			var $this = $(this);
+			if ($this.attr("data-index") > 0) {
+				$this.children('button').append('<b>'+ $this.attr("data-index") +'</b>')
+			}			
+		})
+	}
+	
+	function recruitList() {
+		var $recruitTable = $('.recruit-table dt');			
+		$recruitTable.click(function(){
+			var $this = $(this),
+					classIf = $this.attr('class');
+			$recruitTable.removeClass('active');
+			if(classIf == 'active') {
+				$this.removeClass('active')
+			} else {
+				$this.addClass('active')
+			}
 		})
 	}
 

@@ -116,6 +116,10 @@ i.mobile-hidden {
   float: none;
   margin: 0 20px;
   width: 240px;
+  color: #fff;
+}
+.recruit .full-visual-container {
+  background-size: cover;
 }
 .people-work {
   position: relative;
@@ -229,4 +233,181 @@ i.mobile-hidden {
 }
 .people-photo img {
   width: 100%;
+}
+.recruit-status {
+  position: relative;
+  z-index: 2;
+  padding-top: 82px;
+}
+.recruit-status h3 {
+  font-size: 40px;
+  font-family: 'Noto Sans Korean';
+  line-height: 60px;
+  margin-bottom: 60px;
+}
+.recruit-status i {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 60px;
+  vertical-align: top;
+  margin-left: 34px;
+}
+.recruit-status em {
+  color: #6700ff;
+}
+.recruit-category {
+  border-bottom: 1px solid #d1d0d1;
+}
+.recruit-category ul {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+}
+.recruit-category li {
+  flex-flow: column ;
+}
+.recruit-category li button {
+  position: relative;
+  color: #d1d0d1;
+  transition: all .4s;
+  font-size: 16px;
+  height: 64px;
+}
+.recruit-category li.active button {
+  color: #1a1a1b;
+  font-weight: 600;
+}
+.recruit-category li.active button:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background: #6700ff;
+}
+.recruit-category li:hover button {
+  color: #1a1a1b;
+}
+.recruit-category li:hover button:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background: #6700ff;
+}
+.recruit-category b {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  background: #6700ff;
+  color: #fff;
+  right: -28px;
+  font-size: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.recruit-board {
+  padding: 90px 0 200px;
+  overflow: hidden;
+}
+.recruit-board h3 {
+  font-size: 44px;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 292px;
+  float: left;
+}
+.recruit-board section {
+  float: left;
+  margin-top: 12px;
+  width: calc(100% - 292px);
+}
+.recruit-board .sub {
+  font-size: 16px;
+}
+.recruit-table {
+  position: relative;
+  z-index: 3;
+  margin-top: 43px;
+  width: 100%;
+  border-top: 1px solid #d1d0d1;
+}
+.recruit-table dt {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+  border-bottom: 1px solid #d1d0d1;
+  box-sizing: border-box;
+  padding: 23px 44px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.recruit-table dt.active {
+  background: #f4f4f4;
+}
+.recruit-table dt.active .recruit-board-range {
+  background-image: url('../images/table-arrow-close.png');
+}
+.recruit-table dt.active + dd {
+  display: block;
+  height: auto;
+}
+.recruit-table div {
+  flex-flow: column;
+}
+.recruit-table .recruit-board-posi {
+  flex-basis: 15%;
+}
+.recruit-table .recruit-board-team {
+  flex-basis: 45%;
+}
+.recruit-table .recruit-board-grade {
+  flex-basis: 15%;
+}
+.recruit-table .recruit-board-range {
+  background-image: url('../images/table-arrow-open.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  flex-basis: 25%;
+}
+.recruit-table dd {
+  transition: height 1s;
+  height: 0;
+  overflow: hidden;
+}
+.recruit-table .recruit-contents {
+  padding: 24px 80px;
+  border-bottom: 1px solid #d1d0d1;
+}
+.recruit-table .recruit-contents li {
+  overflow: hidden;
+  padding: 20px 0 ;
+}
+.recruit-table .recruit-contents li.inner-list ul {
+  float: left;
+  width: 100%;
+  padding: 10px 20px;
+}
+.recruit-table .recruit-contents li.inner-list li {
+  padding: 0;
+  line-height: 2.2;
+}
+.recruit-table .recruit-contents li.inner-list li:before {
+  content: "-";
+  padding-right: 5px;
+}
+.recruit-table .recruit-contents .tit {
+  width: 120px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.recruit-table .recruit-contents p {
+  float: left;
+  font-size: 15px;
+  line-height: 30px;
+  width: calc(100% - 120px);
 }
