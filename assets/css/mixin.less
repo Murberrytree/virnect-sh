@@ -46,6 +46,22 @@
   }
 }
 
+.area-flex-inner {
+  width: 780px;
+  margin: auto;
+  @media (max-width: @desktop) {
+    width: 700px;
+  }
+  @media (max-width: @tablet) {
+    width: 480px;
+  }
+  @media (max-width: @mobile) {
+    width: 100%;
+		padding: 0 24px;
+    box-sizing: border-box;
+  }
+}
+
 // default class
 .h-heading {
 	position: absolute;

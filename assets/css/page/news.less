@@ -161,3 +161,68 @@
 		font-family: @noto;
 	}
 }
+
+.news-detail {
+	border-top: 1px solid @num;
+	padding: 100px 0 200px;
+	.category {
+		font-size: 15px;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: @point;
+		margin-bottom: 16px;
+		font-family: @poppins;
+	}
+	.tit {
+		font-size: 54px;
+		margin-bottom: 20px;
+		line-height: 1.3;
+		color: @baseColor;
+	}
+	.img-url {
+		height: 436px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin-top: 80px;
+		margin-bottom: 40px;
+	}
+	p {
+		font-size: 16px;
+		font-family: @noto;
+		line-height: 1.8;
+	}
+	.date {
+		margin-top: 26px;
+		color: @date;
+		font-family: @noto;
+	}
+}
+
+.news-page-ctrl {
+	position: relative;
+	border-top: 1px solid @num;
+	margin-top: 140px;
+	padding-top: 32px;
+	button{
+		width: 120px;
+		height: 44px;
+		font-size: 15px;
+		margin-right: 13px;
+		border: 1px solid @num;
+		color: @fog;
+		&:hover {
+			color: @baseColor;
+			border-color: @baseColor;
+		}
+	}
+	img {
+		vertical-align: middle;
+		padding: 0 2px 3px;
+	}
+	.list {
+		width: 140px;
+		position: absolute;
+		right: 0;
+		margin: 0;
+	}
+}
