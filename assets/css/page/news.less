@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+@import url("../mixin.less");
+
+#news {
+	.fsc-wrap {
+		color: #fff;
+		.tit {
+			font-size: 20px;
+			.text-shadow(0, 1px ,4px);
+			.spacing;
+			text-transform: uppercase;
+			font-family: @poppins;
+		}
+		.sub {
+			font-size: 70px;
+			font-weight: 300;
+			font-family: @poppins;
+			line-height: 1.2;
+			.spacing;
+			i {
+				font-weight: 300;
+				font-style: italic;
+			}
+		}
+		p {
+			font-size: 24px;
+			font-family: @noto;
+			font-weight: 400;
+		}
+		.area-flex {
+			margin-bottom: 160px;
+		}
+		a {
+			display: inline-block;
+			margin-top: 50px;
+			background: url('../images/btn_main_img_arrow_w.png') no-repeat @point 130px center;
+			padding: 14px 74px 14px 24px;
+		}
+	}
+	.page-sub {
+		padding: 86px 0;
+	}
+	.intro-container {
+		padding: 90px 0 ;
+		text-align: center;
+		h3 {
+			float: none;
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
+		.download {
+			float: none;
+			margin: 0 20px;
+			width: 240px;
+			color: #fff;
+		}
+	}	
+}
+
+.news-category {
+	border-top: 1px solid @num;
+	padding: 56px 0;
+	ul {
+		font-size: 0;
+	}
+	li {
+		display: inline-block;
+		font-size: 16px;
+		margin-right: 60px;
+		button {
+			position: relative;
+			color: @fog;
+			padding: 0;
+			transition: all .4s;
+			font-size: 16px;
+			height: 28px;
+		}
+		&.active {
+			button {
+				color: @baseColor;
+				font-weight: 600;
+				&:after {
+					content: "";
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					height: 4px;
+					width: 100%;
+					background: @point;
+				}
+			}
+		}	
+		&:hover {
+			button {
+				color: @baseColor;
+				&:after {
+					content: "";
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					height: 4px;
+					width: 100%;
+					background: @point;
+				}
+			}
+		}
+	}
+}
+
+.news-container {
+	padding-bottom: 100px;
+	li {
+		display: table;
+		overflow: hidden;
+		padding: 6px 0;
+	}
+	div {
+		display: table-cell;
+		vertical-align: middle;
+		width: 50%;
+		text-align: left;
+	}
+	.img-url {
+		height: 330px;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.news-contents {
+		padding-left: 50px;
+		box-sizing: border-box;
+	}
+	.category {
+		font-size: 15px;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: @point;
+		margin-bottom: 18px;
+		font-family: @poppins;
+	}
+	.tit {
+		font-size: 30px;
+		font-weight: 500;		
+		margin-bottom: 20px;
+		height: 30px;
+		line-height: 30px;
+		width: 560px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		color: @baseColor;
+	}
+	p {
+		font-size: 15px;
+		font-family: @noto;
+		color: @year;
+	}
+	.date {
+		margin-top: 26px;
+		color: @date;
+		font-family: @noto;
+	}
+}
