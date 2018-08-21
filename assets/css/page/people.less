@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+@import url("../mixin.less");
+
+#people {
+	.fsc-wrap {
+		.tit {
+			font-size: 20px;
+			.text-shadow(0, 1px ,4px);
+			.spacing;
+			text-transform: uppercase;
+			font-family: @poppins;
+		}
+		.sub {
+			font-size: 70px;
+			font-weight: bold;
+			font-family: @poppins;
+			line-height: 1.2;
+			font-style: italic;
+			.spacing;
+			i {
+				font-weight: 300;
+				font-style: italic;
+			}
+		}
+		p {
+			font-size: 24px;
+			font-family: @noto;
+			font-weight: 400;
+		}
+		.area-flex {
+			margin-bottom: 240px;
+		}
+		a {
+			display: inline-block;
+			margin-top: 50px;
+			background: url('../images/btn_main_img_arrow_w.png') no-repeat @point 130px center;
+			padding: 14px 74px 14px 24px;
+		}
+	}
+	.intro-container {
+		padding: 90px 0 ;
+		text-align: center;
+		h3 {
+			float: none;
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
+		.download {
+			float: none;
+			margin: 0 20px;
+			width: 240px;
+		}
+	}
+}

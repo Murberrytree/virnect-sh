@@ -213,6 +213,22 @@ body {
 .dark button {
   color: #fff;
 }
+.navy {
+  background-color: #1a1e24;
+  color: #fff;
+}
+.navy a,
+.navy button {
+  color: #fff;
+}
+.purple {
+  background-color: #6700ff;
+  color: #fff;
+}
+.purple a,
+.purple button {
+  color: #fff;
+}
 .light {
   background-color: #fff;
   color: #1a1a1b;
@@ -221,14 +237,6 @@ body {
 .light a,
 .light button {
   color: #1a1a1b;
-}
-.navy {
-  background-color: #1a1e24;
-  color: #fff;
-}
-.navy a,
-.navy button {
-  color: #fff;
 }
 .fog {
   background-color: #f6f6f7;

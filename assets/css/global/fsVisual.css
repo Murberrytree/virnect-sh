@@ -75,6 +75,8 @@ i.mobile-hidden {
   text-align: center;
 }
 .fsc-wrap {
+  position: relative;
+  z-index: 1;
   display: table-cell;
   vertical-align: bottom;
   text-align: left;
@@ -88,6 +90,8 @@ i.mobile-hidden {
   }
 }
 .page-sub {
+  position: relative;
+  z-index: 2;
   padding: 140px 0;
   font-size: 16px;
   font-family: 'Noto Sans Korean';
