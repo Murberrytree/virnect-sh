@@ -2139,7 +2139,7 @@ h1 a {
   font-weight: 400;
 }
 #people .fsc-wrap .area-flex {
-  margin-bottom: 240px;
+  margin-bottom: 160px;
 }
 #people .fsc-wrap a {
   display: inline-block;
@@ -2160,6 +2160,119 @@ h1 a {
   float: none;
   margin: 0 20px;
   width: 240px;
+}
+.people-work {
+  position: relative;
+  overflow: hidden;
+  padding: 130px 0 178px;
+  text-align: center;
+}
+.people-work .people-work-wrap {
+  position: relative;
+  z-index: 2;
+}
+.people-work h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  opacity: .5;
+}
+.people-work .tit {
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+.people-work ul {
+  overflow: hidden;
+}
+.people-work li {
+  width: 400px;
+  float: left;
+}
+.people-work dt {
+  display: table-cell;
+  width: 400px;
+  height: 400px;
+  font-size: 32px;
+  vertical-align: middle;
+  font-weight: bold;
+  border: 1px solid #646465;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+.people-work dd {
+  margin-top: 36px;
+  font-size: 16px;
+}
+.people-work .video {
+  opacity: .2;
+}
+.people-benefit {
+  position: relative;
+  padding: 180px 0 190px;
+}
+.people-benefit h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.people-benefit .tit {
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 100px;
+}
+.people-benefit li {
+  margin-bottom: 40px;
+}
+.people-benefit dl {
+  overflow: hidden;
+  font-family: 'Noto Sans Korean';
+  word-break: keep-all;
+}
+.people-benefit dt {
+  float: left;
+  font-size: 20px;
+  font-weight: bold;
+  width: 200px;
+  margin-right: 50px;
+}
+.people-benefit dd {
+  float: left;
+  font-size: 16px;
+  width: 440px;
+}
+.people-benefit .people-pallarax li {
+  position: absolute;
+  z-index: 1;
+}
+.people-benefit .people-pallarax li:first-child {
+  right: 8%;
+  top: 30%;
+}
+.people-benefit .people-pallarax li:last-child {
+  left: auto;
+  right: 2%;
+  top: 55%;
+}
+.people-benefit .people-pallarax img {
+  width: 500px;
+}
+.people-photo {
+  font-size: 0;
+}
+.people-photo .col2 {
+  overflow: hidden;
+}
+.people-photo .col2 div {
+  float: left;
+  width: 57.89%;
+  height: 100%;
+}
+.people-photo .col2 .row2 {
+  width: 42.11%;
+}
+.people-photo img {
+  width: 100%;
 }
 #footer {
   position: relative;
