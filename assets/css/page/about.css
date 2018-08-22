@@ -25,6 +25,27 @@
     box-sizing: border-box;
   }
 }
+.area-flex-inner {
+  width: 780px;
+  margin: auto;
+}
+@media (max-width: 1199px) {
+  .area-flex-inner {
+    width: 700px;
+  }
+}
+@media (max-width: 767px) {
+  .area-flex-inner {
+    width: 480px;
+  }
+}
+@media (max-width: 479px) {
+  .area-flex-inner {
+    width: 100%;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+}
 .h-heading {
   position: absolute;
   left: -9999px;

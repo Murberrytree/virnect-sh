@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge, Chrome=1">
+	<title>VIRNECT</title>
+	<link rel="icon" type="image/x-icon" class="js-site-favicon" href="../assets/images/favicon.ico">
+	<link rel="stylesheet" href="../assets/css/reset.css">
+	<link rel="stylesheet" href="../assets/css/common.css">
+	<script src="../assets/js/jquery-3.2.1.min.js"></script>
+	<script src="../assets/js/slick.js"></script>
+</head>
+
+<body class="dark">
+	<header id="header" class="header if_top">
+		<div class="area-flex">
+			<h1><a href="#"><img src="../assets/images/logo.png"></a></h1>
+			<nav class="gnb-wrap">
+				<h2 class="h-heading">메뉴</h2>
+				<button class="side">
+					<span class="side-from side-layer"></span>
+				</button>
+				<ul id="gnb" class="gnb">
+					<li>
+						<a href="#">About</a>			
+						<ul>
+							<li><a href="#">Virnect</a></li>
+							<li><a href="#">연혁</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Solution</a>
+						<ul>
+							<li><a href="#">Remote AR</a></li>
+							<li><a href="#">SmartWork AR/VR</a></li>
+							<li><a href="#">Make AR</a></li>
+							<li><a href="#">Play AR</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">People</a>
+						<ul>
+							<li><a href="#">People</a></li>
+							<li><a href="#">채용</a></li>
+						</ul>
+					</li>
+					<li><a href="#">News</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+				
+				<div class="m-gnb img-url" data-img="../assets/images/img_main_gnb_v_cut.png">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li>
+							<span>About</span>			
+							<ul>
+								<li><a href="#">Virnect</a></li>
+								<li><a href="#">연혁</a></li>
+							</ul>
+						</li>
+						<li class="active">
+							<span>Solution</span>
+							<ul>
+								<li><a href="#">Remote AR</a></li>
+								<li class="active"><a href="#">SmartWork AR/VR</a></li>
+								<li><a href="#">Make AR</a></li>
+								<li><a href="#">Play AR</a></li>
+							</ul>
+						</li>
+						<li>
+							<span>People</span>
+							<ul>
+								<li><a href="#">People</a></li>
+								<li><a href="#">채용</a></li>
+							</ul>
+						</li>
+						<li><a href="#">News</a></li>
+						<li><a href="#">Contact</a></li>
+						<li class="lang"><a href="#">English</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<main id="contact" class="contact">
+		<h2 class="h-heading">컨텐츠</h2>		
+		<article class="full-visual-container img-url sub-parallax" data-img="../assets/images/sub_visual_07.jpg">
+			<div class="fsc-wrap">
+				<h3 class="h-heading">Virnect feature</h3>
+				<div class="area-flex">
+					<p class="tit">CONTACT</p>
+					<img src="../assets/images/before_cross_w.png" class="slash-img">
+					<p class="sub"><i>WE ARE ALWAYS WAITING FOR</i></p>
+					<p class="sub">YOUR CONTACT</p>
+				</div>
+			</div>
+		</article>
+		<article class="page-sub dark">
+			<div class="area-flex">
+				<p class="tit">버넥트와 상담하세요</p>
+				<p>버넥트는 열린 파트너쉽 마인드를 가지고, 우리의 AR/VR 기술과 관련된 다양한 문의를 언제나 환영합니다. 아래 양식에 내용을 작성해주시면 빠르게 답장드리겠습니다.</p>
+			</div>
+		</article>
+		<article class="contact-form dark">
+			<div class="area-flex">
+				<h3>CONTACT</h3>
+				<form class="contact-contents">
+					<p>문의하실 분야를 선택해 주세요. (중복선택 가능)</p>
+					<ul>
+						<li>
+							<input type="checkbox" id="obj1">
+							<label for="obj1"><span>견적의뢰</span></label>
+						</li>
+						<li>
+							<input type="checkbox" id="obj2">
+							<label for="obj2"><span>데모시연</span></label>
+						</li>
+						<li>
+							<input type="checkbox" id="obj3">
+							<label for="obj3"><span>기술제휴</span></label>
+						</li>
+						<li>
+							<input type="checkbox" id="obj4">
+							<label for="obj4"><span>시범사용</span></label>
+						</li>
+						<li>
+							<input type="checkbox" id="obj5">
+							<label for="obj5"><span>채용</span></label>
+						</li>
+						<li>
+							<input type="checkbox" id="obj6">
+							<label for="obj6"><span>기타</span></label>
+						</li>
+					</ul>
+					<p>기본정보를 입력해주세요.</p>
+					<div class="contact-feedback">
+						<input type="text" class="input-half" placeholder="회사명 or 이름">
+						<input type="text" class="input-half" placeholder="Email">
+						<input type="text" placeholder="제목">
+						<textarea placeholder="상세내용을 입력해주세요."></textarea>
+					</div>
+					<div class="contact-agree">
+						<input type="checkbox" id="agree">
+						<label for="agree"><i>개인정보보호정책</i>에 동의합니다. (필수)</label>
+						<button>문의하기</button>
+					</div>
+				</form>
+			</div>
+		</article>
+		<article id="popUp" class="popup-container">
+			<div class="popup-area">
+				<div class="popup-wrap">
+					<button class="popup-close-btn"><img src="../assets/images/icon-close.png"></button>
+					<div class="popup-header">
+						<h3>개인 정보 보호 정책</h3>
+					</div>
+					<div class="popup-body">
+						<dl>
+							<dt>개인정보 수집이용에 대한 동의</dt>
+							<dd>작성자의 소중한 개인정보는 다음과 같은 정책에 따라 수집 및 이용됩니다. 저희 주식회사 버넥트에서는 해당 목적에 연관되는 개인정보만을 수집하며, 수집된 정보를 투명하고 안전하게 보호 관리할 것을 약속합니다. 이에 개인정보 수집및 이용에 대한 동의를 구합니다.</dd>
+							<dt>개인정보의 수집·이용 목적</dt>
+							<dd>
+								<ul>
+									<li>문의글 작성자에 대한 견적, 기간, 개발방법 등의 문의에 대한 정보가 보다 정확한 답변을 위해 수집됩니다.</li>
+									<li>상시 인력채용을 위한 인재풀 유지를 위해 지원자의 개인정보가 수집됩니다.</li>
+								</ul>
+							</dd>
+							<dt>수집항목</dt>
+							<dd>필수항목: 성명, 이메일, 문의 내용, 회사명 등 작성 내용</dd>
+							<dt>보유이용기간</dt>
+							<dd>원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단, 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존합니다.
+								<ul>
+									<li>보존 이유 : 작성자의 동의를 통한 인재정보 유지</li>
+									<li>보존 기간 : 작성자 정보 삭제 요청시까지</li>
+								</ul>
+							</dd>
+						</dl>
+						<button class="popup-agree-btn">네, 동의합니다.</button>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article class="contact-location">
+			<div class="area-flex">
+				<h3>LOCATION</h3>
+				<div class="contact-contents">
+					<p class="tit">주식회사 버넥트</p>
+					<p>서울특별시 용산구 한강대로 15길 11 세아빌딩 2층</p>
+					<p><i>Tel. 070.7733.2025</i> <i>Fax. 070.4275.1156</i></p>
+					<article id="virnect-location">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d332.6000937430555!2d126.9634722740239!3d37.52576438934961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca20298b07c09%3A0x1dca2448b65b4c50!2z7ISc7Jq47Yq567OE7IucIOyaqeyCsOq1rCDtlZzqsJXroZwz6rCAIO2VnOqwleuMgOuhnDE16ri4IDEx!5e0!3m2!1sko!2skr!4v1530748999022" width="420" height="0" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</article>
+				</div>
+			</div>
+		</article>
+	</main>
+
+	<footer id="footer" class="light">
+		<section class="area-flex">
+			<div class="over-hidden">
+				<h2><img src="../assets/images/foot_logo.png"></h2>
+				<address>
+					<h3 class="h-heading">주소 및 연락처</h3>
+					<dl>
+						<dt>서울지사</dt>
+						<dd>서울특별시 용산구 한강대로 15길 11 <br class="mobile-show">세아빌딩 2층</dd>
+						<dt>전남지사</dt>
+						<dd>전라남도 나주시 정보화길 26 <br class="mobile-show">케이원지식산업센터 4층 413호</dd>
+						<dt>전화</dt>
+						<dd>070-7733-2025</dd>
+					</dl>
+					<ul class="sns">
+						<li><a href="#"><img src="../assets/images/facebook.png" alt="facebook link"></a></li>
+						<li><a href="#"><img src="../assets/images/blog.png" alt="blog link"></a></li>
+						<li><a href="#"><img src="../assets/images/youtube.png" alt="youtube link"></a></li>
+					</ul>
+				</address>
+			</div>
+			<p class="copy">&copy; VIRNECT INC. All rights reserved.</p>
+			<ul class="lang">
+				<li><a href="#">KOR</a></li>
+				<li><a href="#">ENG</a></li>
+			</ul>
+			<div id="topScroll">TOP</div>
+		</section>
+	</footer>
+	<script src="../assets/js/common.js"></script>
+</body>
+
+</html>
